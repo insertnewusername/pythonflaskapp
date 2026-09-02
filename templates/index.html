@@ -8,14 +8,15 @@
     <h1>Submit Your Score</h1>
     <form method="POST">
         Name: <input type="text" name="name" required>
+        Last name: <input type="text" name="lastname" requred>
         Score: <input type="number" name="score" required>
         <input type="submit" value="Submit">
     </form>
-O
+
     <h2>Leaderboard</h2>
     <ul>
-        {% for name, score in entries %}
-            <li>{{ name }}: {{ score }}</li>
+        {% for name, lastname, score in entries %}
+            <li>{{ name }} {{lastname}}: {{ score }}</li>
         {% endfor %}
     </ul>
 </body>

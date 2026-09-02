@@ -20,6 +20,7 @@ def init_db():
             CREATE TABLE IF NOT EXISTS scores (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
+                lastname TEXT NOT NULL,
                 score INTEGER NOT NULL
             )
         ''')
@@ -33,11 +34,12 @@ def leaderboard():
     if request.method == 'POST':
         # Get the name and score that the player entered in the form
         name = request.form['name']
+        lastname = request.form['lastname']
         score = request.form['score']
         
         # Save the new score into the database
         with sqlite3.connect(DB_NAME) as conn:
-            conn.execute('INSERT INTO scores (name, score) VALUES (?, ?)', (name, score))
+            conn.execute('INSERT INTO scores (name, lastname, score) VALUES (?, ?, ?)', (name, lastname, score))
         
         # Redirect the user back to the main page after submitting
         return redirect('/')
@@ -46,7 +48,7 @@ def leaderboard():
     with sqlite3.connect(DB_NAME) as conn:
         cur = conn.cursor()
         # Get all name and score entries from the database (in order they were added)
-        cur.execute('SELECT name, score FROM scores')
+        cur.execute('SELECT name, lastname, score FROM scores')
         entries = cur.fetchall()
     
     # Send the HTML page with the most recent leaderboard
