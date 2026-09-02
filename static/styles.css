@@ -1,0 +1,555 @@
+/* Light mode theme :root means that it's the default */
+:root, [data-theme="default"] {
+    --body-bg-color:#C1DFF0; /* This is a hex coluor*/
+    --container-bg-color:#88CCF1;
+    --container-border-color:#3587A4;
+    --topbar-bg-color:#69a5cf;
+    --text-color:black;
+    --gameicons-bg-color:rgb(167, 213, 253);
+    --gdbackground: linear-gradient(to bottom right, #3366cc 0%, #66ffff 100%); /* This is a gradient */
+}
+
+/*Colour theme for when toggled on dark mode, will use these variables*/
+[data-theme="dark"] {
+    --body-bg-color:#0E1A24;
+    --container-bg-color:#172D3E;
+    --container-border-color:#3587A4;
+    --topbar-bg-color:#315776;
+    --text-color:#ffffff;
+    --gameicons-bg-color:#225276;
+    --gdbackground: linear-gradient(to bottom right, #003399 0%, #99ccff 100%);
+}
+
+
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: 'Rajdhani', sans-serif; /*Applies the font to everything*/
+    color:var(--text-color); /* Makes all text default var text colour*/
+    text-align: center; /* All text aligned center*/
+    
+}
+/* Put normalcontainer here so that the .webtitle will override it for the topbar*/
+.normalcontainer {
+    background-color: var(--container-bg-color);
+    border: 3px solid var(--container-border-color);
+    border-radius: 10px;
+    padding: 20px; /* spacing between other stuff */
+    margin: 10px;
+}
+
+.Webtitle {
+    background-color:var(--topbar-bg-color);
+    font-size:50px;
+    border-width: 5px; /* Overrides the .normalcontainer border width*/
+    font-weight:bold;
+    justify-content:center;
+    display:flex; /* can arrange both title and icon flexibly */
+    position: relative;
+}
+
+
+p {
+    font-size: 18px; /* Declares the size of the font */
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.bigh1 {
+    font-size: 50px;
+}
+
+img {
+    border-radius: 10px; /* Rounded borders for images*/
+}
+
+.bigimg {
+    width: 900px;
+    height:500px;
+    margin: 20px; /* margin instead of paddinsg so it still has the border radius */
+
+}
+
+/* Change theme sun/moon button css */
+
+.switch {
+    position: absolute;
+    right: 60px;
+    top: 15%;
+    transition: transform 0.3s; /* Gives transition time */
+}
+
+.switch:hover {
+    transform: scale(1.1); /* make 1.1 bigger than originally */
+}
+
+.switch input {
+    display: none; /* Hides the checkbox */
+}
+
+.pressbutton {
+    width: 80px;
+    transition: transform(0.3s);
+}
+
+
+/* Navigation bar css */
+
+.Navigationbar {
+    background-color:var(--topbar-bg-color); /* Css variable so can change depending on theme */
+    font-size: 20px; 
+    display: flex;
+    justify-content: space-around; /* spaces everything evenly due to flex */
+}
+
+/* Padding for navbar ahrefs */
+.Navigationbar a, .sitemap a {
+    color:black;
+    text-decoration:none;
+    font-weight: bold; 
+    border-radius:10px;
+    padding:0 5%; /* 0 padding for top and bottom, 5% padding for left and right */
+    transition: 0.3s;
+}
+
+.Navigationbar a:hover, .sitemap a:hover { /* the css on hover */
+    border-radius:10px;
+    background-color: #00bfff;
+    color: white;
+    transform: translateY(-3px); /* Moves up*/
+
+}
+
+/* Sitemap css */
+
+.sitemap a {
+    color: white;
+    font-size: 18px;
+    margin: 10px;
+    padding: 0 10px;
+}
+/* The footer*/
+footer { 
+    background-color: var(--topbar-bg-color);
+    padding: 0px, 10px;
+    color: white;
+}
+
+/* Button css */
+
+.normalbutton a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--container-border-color);
+    color: white; /* overrides default blue hyperlink colour*/
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.normalbutton a:hover {
+    transform: scale(1.05);
+    background-color:#00bfff;
+}
+
+.normalbutton a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--container-border-color);
+    color: white; /* overrides default blue hyperlink colour*/
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.normalbutton a:hover {
+    transform: scale(1.05);
+    background-color:#00bfff;
+}
+
+/* Most of the cards*/
+
+.hovercard div {
+    transition: 0.3s;
+}
+
+.hovercard div:hover{ /* Hover effect for all hover cards inside a div only, so no p or h2 etc */
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Shadowing on hover*/
+}
+
+.aboutstats {
+    display: flex;
+    justify-content: space-around; /* Tells how content inside flexbox will be spaced*/
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.statcard {
+    width: 30%;
+    border: 2px solid var(--container-border-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.whycards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.whycard {
+    width: 30%;
+    border: 2px solid var(--container-border-color);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.skillcards {
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gameicons {
+    width: 100%;
+}
+
+.gameicons p {
+    margin-bottom: 20px;
+}
+
+.gameitem {
+    display: inline-block;
+    width: 30%; /* Each gameitem takes up 30% of 100% */
+    margin: 5px;
+    box-sizing: border-box;
+    vertical-align: top; 
+}
+
+/* Css applies only for images in gameitem div */
+.gameitem img { 
+    width:90%;
+    border: 5px solid var(--container-border-color);
+    border-radius: 10px;
+    margin: 5px; /*spacing between the images*/
+    height: 200px;
+    object-fit: cover;
+}
+
+.gameitem p {
+    border: 2px solid var(--container-border-color);
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    line-height: 1.5;
+}
+
+/* Banners for the top part of pages*/
+/* Selecting two so it applies to both classes */
+.mainstuff, .gamebanner {
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 80px 20px;
+    padding-bottom: 130px;
+    border: 3px solid var(--container-border-color);
+    color:white;  
+    
+}
+
+
+.mainstuff {
+    background: var(--gdbackground); /* the gradient background */
+}
+
+
+/* STYLES FOR ALL INDIVIDUAL GAMES*/
+
+.gamebanner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.securitybanner {
+     background-image: url(https://static.vecteezy.com/system/resources/previews/007/950/908/non_2x/green-grass-field-with-blue-sky-ad-white-cloud-nature-landscape-background-free-photo.jpg);
+     color:black
+}
+
+.cyberbanner {
+    background-image: url(https://img.freepik.com/premium-vector/cartoon-bank-vault-with-money-vector-illustration_264840-7.jpg?w=996);
+    color: black; /* Overrides the white text colour for this banner */
+}
+
+.fishbanner {
+    background-image: url(https://img.pikbest.com/wp/202345/ocean-fish-cartoon-of-swimming-in-the_9612565.jpg!bw700);
+}
+
+
+
+/* About Us page css */
+
+.aboutbanner {
+    padding: 80px 20px; /* 80px padding for top and bottom, 20px padding for left and right */
+    color: white;
+    border-radius: 10px;
+    border: 3px solid var(--container-border-color);
+}
+
+.mission {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.mission .normalcontainer {
+    width: 30%;
+}
+
+
+.uniquecards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style:none;
+    font-size: 28px;
+}
+
+
+/* CAROUSEL IMAGES THING */
+
+
+.gameplay-section img {
+    border-radius: 10px;
+    border: 3px solid var(--container-border-color);
+    transition: 0.3s;
+}
+
+.gameplay-section img:hover {
+    transform: scale(1.02);
+}
+
+.slideshow-container {
+    max-width: 99%; /* Just enough space so that the scrolling bar at bottom doesn't appear */
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slideshow-container img {
+    vertical-align: middle; 
+    width: 70%;
+    height:450px;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  background-color:#5680bb
+}
+
+.prev:hover, .next:hover {
+    transform: scale(1.1)
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px;
+  margin: 0 5%;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px;
+    margin: 0 5%;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  display: block;
+}
+
+.simplecards {
+    display: flex;
+    gap: 20px;
+    margin: 20px 10px;
+}
+
+.simplecard {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Feature Cards */
+
+.featurecardwrapper, .securitycardwrapper {
+    display: flex;
+    gap: 0.5%; /* Percentage so gap differs for screens */
+}
+
+.securitycardwrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.featurecard {
+    width: 42%;
+    transition: 0.3s;
+}
+
+.featurecard img {
+    width: 120px;
+    height: 120px;
+}
+
+/* SECURITYSPACE CSS */
+
+
+.gradtext {
+    background: linear-gradient(to bottom right, #0303c4 0%, #26b968 100%); /* The gradient background for the div */
+}
+
+.gradtext2 {
+    background: linear-gradient(to bottom right, #3366cc 0%, #33cccc 100%);
+}
+
+.gradtext, .gradtext2 {
+    -webkit-background-clip: text; /* Makes the gradient only appear on text*/
+    background-clip: text;
+    color: transparent;
+    font-size: 60px; /* makes the text bigger*/
+}
+
+/* VIBU PERSONAL PAGE SPECIFIC*/
+/* Vertical Facility Map */
+
+.map-room {
+    width: 45%;
+    padding: 20px;
+    background-color: var(--gameicons-bg-color);
+    border: 3px solid var(--container-border-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.zonetext .normalcontainer {
+    margin: 0;
+    flex: 0 0 auto;
+}
+
+.map-room h4 {
+    margin: 0;
+    margin-top: 15px;
+}
+
+
+.map-room img {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    flex: 1;
+    min-height: 0;
+}
+
+.zonerow {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.zonetext {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 35%;
+}
+
+.zonetext .normalcontainer h4:first-child {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: var(--container-border-color);
+}
+
+.zonetext .normalcontainer h4:nth-child(2) {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+.map-arrow {
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--container-border-color);
+    margin-left: 36%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Personal CSS for phish or fish webpage */
+
+.quiz-round input {
+    display: none; /* Hides the radio buttons */
+}
+
+.quiz-round label {
+    display: inline block;
+    padding: 12px 30px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.quiz-round label:hover {
+    background-color: var(--container-border-color);
+    transform: scale(1.05);
+}
+
+#correct, #wrong {
+    display: none; /* Hides the correct and wrong messages */
+}
+
+#fish:checked ~ #wrong {
+    display: block; /* Shows the wrong message if fish is selected */
+}
+
+#phish:checked ~ #correct {
+    display: block; /* Shows the correct message if fish is selected */
+}
+
+.securitycardwrapper img {
+    width: 70%;
+    height: 60%;
+}

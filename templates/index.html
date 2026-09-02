@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Submit Your Score</h1>
+    <form method="POST">
+        Name: <input type="text" name="name" required>
+        Score: <input type="number" name="score" required>
+        <input type="submit" value="Submit">
+    </form>
+O
+    <h2>Leaderboard</h2>
+    <ul>
+        {% for name, score in entries %}
+            <li>{{ name }}: {{ score }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
