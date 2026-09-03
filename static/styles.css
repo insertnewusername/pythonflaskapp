@@ -138,7 +138,7 @@ footer {
 
 /* Button css */
 
-.normalbutton a {
+.normalbutton a, .buttonbutton {
     display: inline-block;
     padding: 8px 20px;
     background-color: var(--container-border-color);
@@ -149,7 +149,7 @@ footer {
     transition: 0.3s;
 }
 
-.normalbutton a:hover {
+.normalbutton a:hover, .buttonbutton:hover {
     transform: scale(1.05);
     background-color:#00bfff;
 }
