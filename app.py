@@ -13,9 +13,6 @@ DB_NAME = 'scores.db'
 def home():
     return render_template('index.html')
 
-@app.route('/')
-def homepage():
-    return render_template('homepage.html')
 
 
 # This function sets up the database if it doesn't already exist
