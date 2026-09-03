@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet"> <!-- This gets a custom font-->
+        <title>Project Cyber</title>
+    </head>
+
+    <body data-theme="default"> <!--Data theme is for light mode and dark mode-->
+        <div class="normalcontainer Webtitle">
+            <span class="title">Project Cyber</span>
+            <label class="switch">
+                <input id="toggler" type="checkbox">
+                <img class="pressbutton" id="toggleicon" src="images/Sun.png"  alt="sun moon icon"> <!--Default is light, so sun.png, javascript swap it for moon.png when toggled-->
+            </label>
+        </div>
+
+        <div class="Navigationbar normalcontainer">
+            <a href="index.html">Home</a> <!--This is a hyperlink-->
+            <a href="cybervault.html">Cybervault</a>
+            <a href="phish_or_fish.html">Phish or fish</a>
+            <a href="securityspace.html">Securityspace</a>
+            <a href="checkout.html">Buy Now</a>
+            <a href="{{ url_for('scores') }}">Scores</a>
+        </div>
+
+        <div class="mainstuff normalbutton">
+            <h1 class="bigh1">The ultimate bundle</h1> 
+            <p>Three entertaining games, Three adventurous journeys to conquer. Now all in one pack!</p>
+            <a href="#featuredprojects">Explore Games ↓</a>
+        </div>
+
+        <div class="aboutus normalcontainer">
+            <h1>What Is Project Cyber?</h1>
+            <p>Project Cyber is a collection of educational cybersecurity games designed to teach vital and important online safety skills to players of any age. Through interactive gameplay, players can learn about phishing awareness, data protection and most importantly, staying safe in the overwhelming digital world.</p>
+            <div class="aboutstats hovercard">
+                <div class="statcard">
+                    <h2>3</h2>
+                    <p>Educational Games</p>
+                </div>
+
+                <div class="statcard">
+                    <h2>100%</h2>
+                    <p>Cybersecurity Focused</p>
+                </div>
+
+                <div class="statcard">
+                    <h2>1</h2>
+                    <p>Mission</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="normalbutton normalcontainer" id="featuredprojects"><!--Having multiple classes in a div-->
+            <h1 class="bigh1">Choose Your Cyber Adventure!</h1>
+            <div class="gameicons hovercard">
+                <p>Explore our many skillfully handcrafted games, all of exceptional quality, as intended</p>
+                <div class="gameitem normalcontainer">
+                    <img src="images/Securityspace.png" alt="Image of Security Space"> <!--This will show an image-->
+                    <h2>Securityspace</h2>
+                    <p>Four realms. One mission. Embark on a journey through the digital universe, overcome cybersecurity trials and unlock the secrets of online safety.</p>
+                    <a href="securityspace.html">View Game →</a>
+                </div>
+
+                <div class="gameitem normalcontainer">
+                    <img src="images/serverbay.png" alt="Image of Cybervault">
+                    <h2>Cybervault</h2>
+                    <p>The Vault is locked. The challenge is waiting. Outsmart advanced security systems, outwit digital defence and test your skills in the world's most prestigious facility.</p>
+                    <a href="cybervault.html">View Game →</a>
+                </div>
+
+                <div class="gameitem normalcontainer">
+                    <img src="images/phish3.png" alt="Image of Phish or Fish">
+                    <h2>Phish or fish</h2>
+                    <p>Not everything that bites is a fish. Reel in the truth, spot phishing traps, and survive the dangers of the digital ocean. Identify threats before they catch you</p>
+                    <a href="phish_or_fish.html">View Game →</a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="normalcontainer">
+            <h2>Why Choose Project Cyber?</h2>
+            <div class="whycards hovercard">
+
+                <div class="whycard">
+                    <h1>🎮</h1>
+                    <h3>Interactive Learning</h3>
+                    <p>Learn cybersecurity through exciting games and challenges instead of traditional, mundane lessons</p>
+                </div>
+
+                <div class="whycard">
+                    <h1>🌎</h1>
+                    <h3>Real-World Skills</h3>
+                    <p>Explore realistic digital threats and learn how to stay safer in everyday online situations.</p>
+                </div>
+
+                <div class="whycard">
+                    <h1>🚀</h1>
+                    <h3>One Complete Bundle</h3>
+                    <p>Experience three unique cybersecurity adventures combined into an affordable gaming package.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="normalcontainer">
+            <h2>Skills You Will Learn</h2>
+            <div class="skillcards whycards hovercard"> <!-- Having whycards refrains from repeating whycard css in skillcard, shortening it-->
+                <div class="whycard">
+                    <h1>🎣</h1>
+                    <p><b>Phishing Awareness</b></p>
+                </div>
+
+                <div class="whycard">
+                    <h1>🔐</h1>
+                    <p><b>Password Security</b></p>
+                </div>
+
+                <div class="whycard">
+                    <h1>🛡️</h1>
+                    <p><b>Data Privacy</b></p>
+                </div>
+
+                <div class="whycard">
+                    <h1>📱</h1>
+                    <p><b>Two-Factor Authentication</b></p>
+                </div>
+
+                <div class="whycard">
+                    <h1>🌐</h1>
+                    <p><b>Digital Citizenship</b></p>
+                </div>
+
+                <div class="whycard">
+                    <h1>👨🏻‍💻</h1>
+                    <p><b>Online Safety</b></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="normalcontainer normalbutton">
+            <h1><b>Want to find out more?</b></h1>
+            <a href="aboutus.html">Learn More About Us Here!</a>
+        </div>
+
+        <div class="sitemap normalcontainer">
+            <h2>Website Sitemap</h2>
+            <a href="index.html">Home</a>
+            <a href="cybervault.html">CyberVault</a>
+            <a href="phish_or_fish.html">Phish or Fish</a>
+            <a href="securityspace.html">Securityspace</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+            
+
+        <footer>
+            <p>Connect with us by purchasing our package:</p>
+            <p>
+                CyberVault<br>
+                Phish or Fish<br>
+                Security Space<br>
+            </p>
+        </footer>      
+         
+        <script src="theme.js"></script> <!-- Calls for the theme script -->
+    </body>
+</html>
