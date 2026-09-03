@@ -5,6 +5,22 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+            <div class="normalcontainer Webtitle">
+            <span class="title">Project Cyber</span>
+            <label class="switch">
+                <input id="toggler" type="checkbox">
+                <img class="pressbutton" id="toggleicon" src="images/Sun.png"  alt="sun moon icon"> <!--Default is light, so sun.png, javascript swap it for moon.png when toggled-->
+            </label>
+        </div>
+
+        <div class="Navigationbar normalcontainer">
+            <a href="index.html">Home</a> <!--This is a hyperlink-->
+            <a href="cybervault.html">Cybervault</a>
+            <a href="phish_or_fish.html">Phish or fish</a>
+            <a href="securityspace.html">Securityspace</a>
+            <a href="checkout.html">Buy Now</a>
+        </div>
+        
     <div class="normalcontainer"><h1>Submit Your Score</h1></div>
         <div class="normalcontainer">
             <form method="POST">
