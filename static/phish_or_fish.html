@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+        <title>Project Cyber</title>
+    </head>
+
+    <body data-theme="default">
+        <div class="Webtitle normalcontainer">
+            <span class="title">Project Cyber</span>
+
+            <label class="switch">
+                <input id="toggler" type="checkbox">
+                <img class="pressbutton" id="toggleicon" src="images/Sun.png"  alt="sun moon icon">
+            </label>
+        </div>
+
+        <div class="Navigationbar normalcontainer">
+            <a href="index.html">Home</a>
+            <a href="cybervault.html">Cybervault</a>
+            <a href="phish_or_fish.html">Phish or fish</a>
+            <a href="securityspace.html">Securityspace</a>
+            <a href="checkout.html">Buy Now</a>
+        </div>
+
+        <div class="gamebanner fishbanner">
+            <h1 class="gradtext">Phish or Fish</h1>
+            <p>Save the lake. Stop the pirates. Eliminate the Phish. </p>
+        </div>
+
+        <div class="normalcontainer">
+            <h1>Join a community of Cyber Patrol Oficers</h1>
+            <p>Once a peaceful home, the majestic lake has become overrun with rogue phish disguised as ordinary fish. Under the guidance of the experienced Policeman Peter, your mission is to identify cyber threats, protect wildlife and keep the lake safe.</p>
+        </div>
+
+        <div class="gameplay-section normalcontainer">
+            <h1>Gameplay Preview</h1>
+            <div class="slideshow-container">
+                <div class="slide fade">
+                        <img src="images/fishorphish.png" alt="Catching fish">
+                    <div class="text">Just going on a fish catching trip.</div>
+                </div>
+
+                <div class="slide fade">
+                    <img src="images/scarypirates.png" alt="Pirates ahead!">
+                    <div class="text">Pirates ahead!</div>
+                </div>
+
+                <div class="slide fade">
+                    <img src="images/theshop.png" alt="This is the Shop.">
+                    <div class="text">This is the shop</div>
+                </div>
+
+            <a class="prev" onclick="plusslides(-1)">❮</a>
+            <a class="next" onclick="plusslides(1)">❯</a>
+
+            </div>
+        </div> <!---- CLOSING DIV FOR GAMEPLAY-SECTION FOR NORMALCONTAINER -->
+
+
+        <div class="simplecards hovercard">
+
+            <div class="simplecard normalcontainer">
+                <h1>Catch Phish</h1>
+                <p>Inspect every fish carefully before deciding whether it is a truly safe fish or a vicious <b>PHISH</b>.</p>
+            </div>
+
+            <div class="simplecard normalcontainer">
+                <h1>Secure Passwords</h1>
+                <p>Learn how to create <b>strong passwords</b> to authorise purchases and keep accounts secure.</p>
+            </div>
+
+            <div class="simplecard normalcontainer">
+                <h1>Report Threats</h1>
+                <p><b>Report</b> confirmed phish quickly to protect yourself and everyone else on the lake.</p>
+            </div>
+
+        </div>
+
+
+        <div class="skills normalcontainer">
+            <h1>Cyber Security Skills</h1>
+
+            <div class="skillcards hovercard">
+
+                <div class="skillcard">
+                    <h4>Strong Passwords</h4>
+                    <p>Create long, unpredictable passwords using random words and symbols.</p>
+                </div>
+
+                <div class="skillcard">
+                    <h4>Phishing Awareness</h4>
+                    <p>Learn to identify phishing attempts and avoid falling victim to cyber attacks.</p>
+                </div>
+
+                <div class="skillcard">
+                    <h4>Reporting Threats</h4>
+                    <p>Understand the importance of reporting suspicious activity to protect yourself and others.</p>
+                </div>
+
+            </div> 
+        </div>
+
+        <div class="normalcontainer">
+            <h1>UPGRADE YOUR TOOLS, VIEW THE ENCYCLOPEDIA, AND REPORT <b>PHISH</b> AT THE SHOP</h1>
+            <br>
+            <h4>Earn coins by catching and saving the native fish</h4>
+            <br>
+
+            <div class="featurecardwrapper">
+    
+                <div class="featurecard normalcontainer">
+                    <div class="featuretext">
+                        <h1>Upgrade Hook</h1>
+                        <p>Increase the size of the hook.</p>
+                    </div>
+                </div>
+
+                <div class="featurecard normalcontainer">
+                    <div class="featuretext">
+                        <h1>Upgrade Lure</h1>
+                        <p>Increase the speed of the fish.</p>
+                    </div>
+                </div>
+
+                <div class="featurecard normalcontainer">
+                    <div class="featuretext">
+                        <h1>Upgrade Value of fish</h1>
+                        <p>Increase the value gained when a fish is caught.</p>
+                    </div>
+                </div>
+
+                <div class="featurecard normalcontainer">
+                    <div class="featuretext">
+                        <h1>Access Encyclopedia</h1>
+                        <p>View the array of fish native to the lake.</p>
+                    </div>
+                </div>
+
+                <div class="featurecard normalcontainer">
+                    <div class="featuretext">
+                        <h1><strong>Report Phish</strong></h1>
+                        <p>Report all the vicious phish in the lake.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="simplecards hovercard">
+            <div class="simplecard normalcontainer quiz-round">
+                <h1>Fish or Phish<br>Try a basic version of the game!</h1>
+
+                <img src="images/quiz.png" alt="Is it a fish or phish?">
+
+                <p>Is this a Fish or a Phish?</p>
+
+                <input type="radio" name="answer" id="fish">
+                <label for="fish">FISH</label>
+
+                <input type="radio" name="answer" id="phish">
+                <label for="phish">PHISH</label>
+
+                <p id="correct"><strong>Correct!</strong> This was a phish.</p>
+                <p id="wrong"><strong>Wrong!</strong> This was actually a deceptive phish.</p>
+            </div>
+        
+            <div class="simplecard normalcontainer">
+                <h1>Ways to lose</h1>
+                <ul>
+                    <li>Reporting an innocent fish</li>
+                    <li>Purchasing before reporting a Phish</li>
+                    <li>Catch a phish but ignore it</li>
+                    <li>Run out of time before catching 5 phish</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="replay-section normalcontainer hovercard">
+            <h1>Ready for another patrol?</h1>
+            <p>Every playthrough presents new threats. Improve your skills and become the <b>ultimate Cyber Patrol Officer</b>.</p>
+        </div>
+
+        <div class="sitemap normalcontainer">
+            <h2>Website Sitemap</h2>
+            <a href="index.html">Home</a>
+            <a href="cybervault.html">CyberVault</a>
+            <a href="phish_or_fish.html">Phish or Fish</a>
+            <a href="securityspace.html">Securityspace</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        
+
+        <footer>
+        <p>Connect with us by purchasing our package:
+        <p>
+            CyberVault<br>
+            Phish or Fish<br>
+             Security Space<br>
+        </p>
+        </p>
+        </footer> 
+           
+        <script src="theme.js"></script> <!-- Calls for the theme script -->
+    </body>
+</html>
