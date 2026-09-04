@@ -8,12 +8,6 @@ app = Flask(__name__)
 # Name of the database file (don't change this unless you also update it below)
 DB_NAME = 'scores.db'
 
-# Routing for hyperlinks
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-
 
 # This function sets up the database if it doesn't already exist
 def init_db():
