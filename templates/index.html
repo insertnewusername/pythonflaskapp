@@ -10,7 +10,7 @@
             <span class="title">Project Cyber</span>
             <label class="switch">
                 <input id="toggler" type="checkbox">
-                <img class="pressbutton" id="toggleicon" src="images/Sun.png"  alt="sun moon icon"> <!--Default is light, so sun.png, javascript swap it for moon.png when toggled-->
+                <img class="pressbutton" id="toggleicon" src="{{ url_for('static', filename='images/Sun.png') }}"  alt="sun moon icon"> <!--Default is light, so sun.png, javascript swap it for moon.png when toggled-->
             </label>
         </div>
 
@@ -26,7 +26,7 @@
         <div class="normalcontainer">
             <form method="POST">
             Name: <input type="text" name="name" required>
-            Last name: <input type="text" name="lastname" requred>
+            Last name: <input type="text" name="lastname" required>
             Score: <input type="number" name="score" required>
             <input type="submit" value="Submit" class="buttonbutton">
         </form>
@@ -36,7 +36,7 @@
         <ul>
             {% for name, lastname, score in entries %}
                 {% if score | int > 1000 %}
-                    <li>{{ name }} {{lastname}}: {{ score }}</li>
+                    <li>{{loop.index}}. {{ name }} {{lastname}}: {{ score }}</li>
                 {% endif %}
             {% endfor %}
         </ul>
@@ -46,8 +46,8 @@
     <h2>Leaderboard</h2>
     <ul>
         {% for name, lastname, score in entries %}
-                <li>{{ name }} {{lastname}}: {{ score }}</li>
-        {% endfor %}
+                <li>{{loop.index}}. {{ name }} {{lastname}}: {{ score }}</li>
+        {% endfor %}    
     </ul>
     </div>
 </body>
