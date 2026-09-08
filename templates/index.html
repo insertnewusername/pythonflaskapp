@@ -27,7 +27,7 @@
             <form method="POST">
             Name: <input type="text" name="name" required>
             Last name: <input type="text" name="lastname" required>
-            Score: <input type="number" name="score" required>
+            Score: <input type="number" name="score" required >
             <input type="submit" value="Submit" class="buttonbutton">
         </form>
     </div>
@@ -43,6 +43,22 @@
     </div>
 
     <div class="normalcontainer">
+        
+        <div class="orderby normalcontainer">
+
+            <div class="dropdown">
+                <button class="dropdownbutton">Sort By</button>
+                <div class="dropdowncontent">
+                    <a href="/?sort=score&order={{ request.args.get('order', 'desc') }}">Score</a>
+                    <a href="/?sort=name&order={{ request.args.get('order', 'desc') }}">Name</a> <!--Keeps the order ascending/descending-->
+                </div>
+            </div>
+
+            <a href="/?order=asc&sort={{ request.args.get('sort', 'score') }}">🔺</a>
+            <a href="/?order=desc&sort={{ request.args.get('sort', 'score') }}">🔻</a>
+
+            </div>
+
     <h2>Leaderboard</h2>
     <ul>
         {% for name, lastname, score in entries %}
