@@ -47,7 +47,7 @@
         <div class="orderby normalcontainer">
 
             <div class="dropdown">
-                <button class="dropdownbutton">Sort By</button>
+                <button class="dropdownbutton">Sort By: {{ request.args.get('sort', 'score') | title }}</button>
                 <div class="dropdowncontent">
                     <a href="/?sort=score&order={{ request.args.get('order', 'desc') }}">Score</a>
                     <a href="/?sort=name&order={{ request.args.get('order', 'desc') }}">Name</a> <!--Keeps the order ascending/descending-->
