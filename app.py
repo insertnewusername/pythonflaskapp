@@ -49,7 +49,20 @@ def leaderboard():
     with sqlite3.connect(DB_NAME) as conn:
         cur = conn.cursor()
         # Get all name and score entries from the database (in order they were added)
-        cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC')
+
+        sort = request.args.get('sort', 'score')  # default is score
+        sort_order = request.args.get('order', 'desc')
+        
+        if sort == 'name' and sort_order == 'asc':
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY name ASC LIMIT 15')
+        elif sort == 'name' and sort_order == 'desc':
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY name DESC LIMIT 15')
+        elif sort == 'score' and sort_order == 'asc':
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY score ASC LIMIT 15')
+        else:
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 15')
+
+
         entries = cur.fetchall()
     
     # Send the HTML page with the most recent leaderboard
