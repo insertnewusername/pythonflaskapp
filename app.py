@@ -54,13 +54,13 @@ def leaderboard():
         sort_order = request.args.get('order', 'desc')
         
         if sort == 'name' and sort_order == 'asc':
-            cur.execute('SELECT name, lastname, score FROM scores ORDER BY name ASC LIMIT 15')
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY name ASC')
         elif sort == 'name' and sort_order == 'desc':
-            cur.execute('SELECT name, lastname, score FROM scores ORDER BY name DESC LIMIT 15')
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY name DESC')
         elif sort == 'score' and sort_order == 'asc':
-            cur.execute('SELECT name, lastname, score FROM scores ORDER BY score ASC LIMIT 15')
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY score ASC')
         else:
-            cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 15')
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC')
 
 
         entries = cur.fetchall()
