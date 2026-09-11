@@ -40,7 +40,10 @@
             {% for name, lastname, score in entries %}
                 {% if score | int > 1000 %}
             <tr>
-                <td>{{loop.index}}.</td><td>{{ name }}</td> <td>{{lastname}}</td> <td>{{ score }}</td>
+                <td class= "{% if loop.index == 1 %}gold{% elif loop.index == 2 %}silver{% elif loop.index == 3 %}bronze{% endif %}">{{loop.index}}.</td>
+                <td>{{ name }}</td> 
+                <td>{{lastname}}</td> 
+                <td>{{ score }}</td>
             </tr>
                 {% endif %}
             {% endfor %}    
@@ -75,6 +78,8 @@
             <td>{{loop.index}}.</td><td>{{ name }}</td> <td>{{lastname}}</td> <td>{{ score }}</td>
         </tr>
         {% endfor %}    
+
+        
     </table>
     </div>
 </body>
