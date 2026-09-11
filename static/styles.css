@@ -623,3 +623,26 @@ table {
     font-size:25px;
     margin:auto; /*Set margin to auto so it auto centers left and right */
 }
+
+
+td.gold, td.silver, td.bronze {
+    border-radius:16px;
+}
+
+
+td.gold {
+    background-color:gold;
+}
+
+td.silver {
+    background-color:silver;
+}
+
+td.bronze {
+    background-color:#CD7F32;
+}
+
+input {
+    background-color:var(--topbar-bg-color);
+    border-color:var(--container-border-color);
+}
