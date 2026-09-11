@@ -569,6 +569,7 @@ ul {
     background-color: var(--container-border-color);
     color:white;
     transition: 0.3s;
+    text-decoration:none;
 }
 
 .orderby button:hover, .orderby a:hover {
@@ -615,3 +616,10 @@ ul {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropdownbutton {background-color: #00bfff;}
+
+
+table {
+    width: 70%;
+    font-size:25px;
+    margin:auto; /*Set margin to auto so it auto centers left and right */
+}
