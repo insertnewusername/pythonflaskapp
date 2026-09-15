@@ -41,7 +41,7 @@
                 <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
             </tr>
             {% set hall = namespace(rank=0) %}
-            {% for name, lastname, score in entries %}
+            {% for name, lastname, score in halloffame %}
                 {% if score | int > 1000 %}
                     {% set hall.rank = hall.rank + 1 %}
             <tr>
@@ -52,14 +52,6 @@
             </tr>
                 {% endif %}
             {% endfor %} 
-            
-                {% if not hall.found %}
-                    <tr>
-                        <td colspan="4" style="text-align:center; font-weight:bold; padding-top:20px">
-                            No scores above 1000 yet!
-                        </td>
-                    </tr>
-                {% endif %}
         </table>
 
     </div>

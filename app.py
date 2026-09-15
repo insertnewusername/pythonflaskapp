@@ -50,6 +50,15 @@ def leaderboard():
         cur = conn.cursor()
         # Get all name and score entries from the database (in order they were added)
 
+
+        # Hall of fame
+        cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 5')
+
+        hallofffame = cur.fetchall()
+
+
+
+
         sort = request.args.get('sort', 'score')  # default is score
         sort_order = request.args.get('order', 'asc')
         
@@ -66,7 +75,10 @@ def leaderboard():
         entries = cur.fetchall()
     
     # Send the HTML page with the most recent leaderboard
-    return render_template('index.html', entries=entries)
+    return render_template('index.html', halloffame=halloffame, entries=entries)
+
+
+
 
 #----- Mainline program: This code executes when we run this file.-----#
 
