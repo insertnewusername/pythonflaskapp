@@ -51,7 +51,7 @@ def leaderboard():
         # Get all name and score entries from the database (in order they were added)
 
         sort = request.args.get('sort', 'score')  # default is score
-        sort_order = request.args.get('order', 'desc')
+        sort_order = request.args.get('order', 'asc')
         
         if sort == 'name' and sort_order == 'asc':
             cur.execute('SELECT name, lastname, score FROM scores ORDER BY name ASC LIMIT 15')
