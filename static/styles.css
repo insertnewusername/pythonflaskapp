@@ -621,7 +621,8 @@ ul {
 table {
     width: 70%;
     font-size:25px;
-    margin:auto; /*Set margin to auto so it auto centers left and right */
+    table-layout:fixed;
+    margin:auto;
 }
 
 
