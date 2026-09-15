@@ -3,6 +3,8 @@
 Within this year I've been introduced to hackclub, I've been learning a few languages. HTML, css, touched a bit on javascript, and godot.
 I thought it would be a suitable time now to introduce myself to python
 This project was built using python, html, css, little javascript, sql, jinjascript, and some other stuff
+Pls ignore the negative number as I was testing it, u can't add negative numbers as scores anymore now btw
+Also the entire scoring system is fake and made up
 
 This project was mainly for me to learn about python and stuff related to it, like sql, jinjascript etc.
 
