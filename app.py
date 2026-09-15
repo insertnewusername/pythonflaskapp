@@ -54,7 +54,7 @@ def leaderboard():
         # Hall of fame
         cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 5')
 
-        hallofffame = cur.fetchall()
+        halloffame = cur.fetchall()
 
 
 
