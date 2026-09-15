@@ -85,7 +85,9 @@ def leaderboard():
 init_db()  # Set up the database before starting the web app
 
 # Start the Flask server for local testing (Comment the version not being used)
-app.run(debug=True)  
+if __name__ == "__main__":
+    app.run(debug=True)
+
 # Use this version when testing on your computer only
 
 #app.run(debug=True, host='0.0.0.0') 
