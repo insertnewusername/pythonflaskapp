@@ -14,6 +14,8 @@ As this was a sample project for me to learn python, I really didn't want to cre
 
 Submitting this to live early as I don't want it to end and then I ship. I'll submit an update to the project soon.
 
+Project url: https://pythonflaskapp-fdj0.onrender.com
+
 Screenshots
 
 <img width="1847" height="932" alt="Screenshot 2026-09-15 193845" src="https://github.com/user-attachments/assets/9a901e0f-e222-48c0-966c-bf5d8d815dfb" />
