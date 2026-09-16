@@ -31,7 +31,7 @@
             Name: <input type="text" name="name" required>
             Last name: <input type="text" name="lastname" required>
             Score: <input type="number" name="score" min="0" required>
-            <input type="submit" value="Submit" class="buttonbutton">
+            <input type="submit" value="Submit" class="buttonbutton" onclick="confirmsub()">
         </form>
     </div>
     <div class="normalcontainer">
@@ -84,5 +84,6 @@
 
         </table>
     </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

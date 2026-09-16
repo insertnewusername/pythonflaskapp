@@ -627,7 +627,10 @@ table {
 
 
 td.gold, td.silver, td.bronze {
-    border-radius:16px;
+    border-radius:20px;
+    display:inline-block;
+    width:20%;
+    
 }
 
 

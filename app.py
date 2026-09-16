@@ -45,6 +45,7 @@ def leaderboard():
         # Redirect the user back to the main page after submitting
         return redirect('/')
     
+    
     # If it's a normal page load (GET request), show the leaderboard
     with sqlite3.connect(DB_NAME) as conn:
         cur = conn.cursor()
