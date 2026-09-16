@@ -57,11 +57,10 @@
     </div>
 
     <div class="normalcontainer">
+
+        <h1>Leaderboard</h1>
         
         <div class="orderby normalcontainer">
-
-            <h1>Leaderboard</h1>
-
             <div class="dropdown">
                 <button class="dropdownbutton">Sort By: {{ request.args.get('sort', 'score') | title }}</button>
                 <div class="dropdowncontent">
@@ -69,23 +68,21 @@
                     <a href="/?sort=name&order={{ request.args.get('order', 'asc') }}">Name</a> <!--Keeps the order ascending/descending-->
                 </div>
             </div>
-
             <a href="/?order=asc&sort={{ request.args.get('sort', 'score') }}" title="ascending">🔼</a>
             <a href="/?order=desc&sort={{ request.args.get('sort', 'score') }}" title="descending">🔽</a>
-
-            </div>
-
-            <table>
-                <tr>
-                    <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
-                </tr>
-                {% for name, lastname, score in entries %}
-                <tr>
-                    <td class= "{% if loop.index == 1 %}gold{% elif loop.index == 2 %}silver{% elif loop.index == 3 %}bronze{% endif %}">{{loop.index}}.</td><td>{{ name }}</td> <td>{{lastname}}</td> <td>{{ score }}</td>
-                </tr>
-                {% endfor %}    
-
-            </table>
         </div>
-    </body>
+
+        <table>
+            <tr>
+                <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
+            </tr>
+            {% for name, lastname, score in entries %}
+            <tr>
+                <td class= "{% if loop.index == 1 %}gold{% elif loop.index == 2 %}silver{% elif loop.index == 3 %}bronze{% endif %}">{{loop.index}}.</td><td>{{ name }}</td> <td>{{lastname}}</td> <td>{{ score }}</td>
+            </tr>
+            {% endfor %}    
+
+        </table>
+    </div>
+</body>
 </html>
