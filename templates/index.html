@@ -60,6 +60,8 @@
         
         <div class="orderby normalcontainer">
 
+            <h1>Leaderboard</h1>
+
             <div class="dropdown">
                 <button class="dropdownbutton">Sort By: {{ request.args.get('sort', 'score') | title }}</button>
                 <div class="dropdowncontent">
@@ -73,18 +75,17 @@
 
             </div>
 
-    <h1>Leaderboard</h1>
-        <table>
-            <tr>
-                <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
-            </tr>
-            {% for name, lastname, score in entries %}
-            <tr>
-                <td class= "{% if loop.index == 1 %}gold{% elif loop.index == 2 %}silver{% elif loop.index == 3 %}bronze{% endif %}">{{loop.index}}.</td><td>{{ name }}</td> <td>{{lastname}}</td> <td>{{ score }}</td>
-            </tr>
-            {% endfor %}    
+            <table>
+                <tr>
+                    <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
+                </tr>
+                {% for name, lastname, score in entries %}
+                <tr>
+                    <td class= "{% if loop.index == 1 %}gold{% elif loop.index == 2 %}silver{% elif loop.index == 3 %}bronze{% endif %}">{{loop.index}}.</td><td>{{ name }}</td> <td>{{lastname}}</td> <td>{{ score }}</td>
+                </tr>
+                {% endfor %}    
 
-        </table>
-    </div>
-</body>
+            </table>
+        </div>
+    </body>
 </html>
