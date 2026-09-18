@@ -617,7 +617,6 @@ ul {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropdownbutton {background-color: #00bfff;}
 
-
 table {
     width: 70%;
     font-size:25px;
@@ -625,14 +624,12 @@ table {
     margin:auto;
 }
 
-
 td.gold, td.silver, td.bronze {
     border-radius:20px;
     display:inline-block;
     width:20%;
     
 }
-
 
 td.gold {
     background-color:gold;

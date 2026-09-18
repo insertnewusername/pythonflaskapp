@@ -28,8 +28,8 @@
     </div>
         <div class="normalcontainer">
             <form method="POST">
-            Name: <input type="text" name="name" required>
-            Last name: <input type="text" name="lastname" required>
+            Name: <input type="text" name="name" required required pattern="(^\S+)([a-zA-Z])" title="No spaces or numbers allowed">
+            Last name: <input type="text" name="lastname" required required pattern="(^\S+)([a-zA-Z])" title="No spaces or numbers allowed">
             Score: <input type="number" name="score" min="0" required>
             <input type="submit" value="Submit" class="buttonbutton" onclick="confirmsub()">
         </form>
@@ -71,6 +71,11 @@
             <a href="/?order=asc&sort={{ request.args.get('sort', 'score') }}" title="ascending">🔼</a>
             <a href="/?order=desc&sort={{ request.args.get('sort', 'score') }}" title="descending">🔽</a>
         </div>
+
+        <form action="{{ url_for('search') }}" method="get">
+            <input type="text" name="q" placeholder="search for user">
+            <button type="submit">Search</button>
+        </form>
 
         <table>
             <tr>
