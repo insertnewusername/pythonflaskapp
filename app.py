@@ -1,6 +1,5 @@
 # Import the necessary modules from Flask and sqlite3
 from flask import Flask, render_template, request, redirect
-from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 
 # Create the Flask app
@@ -30,15 +29,6 @@ def init_db():
 #This specifies that the following function will run whenever there's any actions taken on the web page
 @app.route('/', methods=['GET', 'POST'])
 
-@app.route('/search')
-def search():
-    query = request.args.get('q', '') 
-    if query:
-        results = Item.name.ilike(f'%{query}%')
-    else:
-        results = []
-        
-    return render_template('search_results.html', results=results, query=query)
 
 # This function handles both displaying the leaderboard and submitting scores
 def leaderboard():
