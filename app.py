@@ -95,12 +95,10 @@ def search():
                 ORDER BY score ASC
             ''', (f'%{query}%', f'%{query}%'))
         else:
-            # No query → just show the normal leaderboard (same default as '/')
             cur.execute('SELECT name, lastname, score FROM scores ORDER BY score ASC LIMIT 15')
 
         entries = cur.fetchall()
 
-        # Hall of Shame is always the same, unfiltered
         cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 5')
         halloffame = cur.fetchall()
 
