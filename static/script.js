@@ -1,4 +1,4 @@
-const scoreForm = document.getElementById("scoreForm");
-scoreForm.addEventListener("submit", function () {
+const ScoreForm = document.getElementById("ScoreForm");
+ScoreForm.addEventListener("submit", function () {
 alert("Submitted successfully");
 });

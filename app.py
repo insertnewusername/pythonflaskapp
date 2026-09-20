@@ -81,7 +81,30 @@ def leaderboard():
     return render_template('index.html', halloffame=halloffame, entries=entries)
 
 
+@app.route('/search')
+def search():
+    query = request.args.get('q', '').strip()
 
+    with sqlite3.connect(DB_NAME) as conn:
+        cur = conn.cursor()
+
+        if query:
+            cur.execute('''
+                SELECT name, lastname, score FROM scores
+                WHERE name LIKE ? OR lastname LIKE ?
+                ORDER BY score ASC
+            ''', (f'%{query}%', f'%{query}%'))
+        else:
+            # No query → just show the normal leaderboard (same default as '/')
+            cur.execute('SELECT name, lastname, score FROM scores ORDER BY score ASC LIMIT 15')
+
+        entries = cur.fetchall()
+
+        # Hall of Shame is always the same, unfiltered
+        cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 5')
+        halloffame = cur.fetchall()
+
+    return render_template('index.html', halloffame=halloffame, entries=entries, query=query)
 
 #----- Mainline program: This code executes when we run this file.-----#
 

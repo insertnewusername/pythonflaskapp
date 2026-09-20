@@ -77,36 +77,6 @@
             <button type="submit">Search</button>
         </form>
 
-
-           {% if results %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>LastName</th>
-                    <th>Score</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                {% for item in results %}
-                <tr>
-                    <td>{{ item.rank }}</td>
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.lastname }}</td>
-                    <td>{{ item.score }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        {% if query %}
-            <p class="no-results">No users found named "{{ query }}".</p>
-        {% endif %}
-    {% endif %}
-
-
         <table>
             <tr>
                 <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
