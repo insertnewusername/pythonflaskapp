@@ -75,6 +75,7 @@ def leaderboard():
 
 
         entries = cur.fetchall()
+
     
     # Send the HTML page with the most recent leaderboard
     return render_template('index.html', halloffame=halloffame, entries=entries)

@@ -27,11 +27,11 @@
         <h2>Put below your details, as well as your score, which is how many seconds it took you to beat the game!</h2>
     </div>
         <div class="normalcontainer">
-            <form method="POST">
+            <form method="POST" id="ScoreForm">
             Name: <input type="text" name="name" required required pattern="(^\S+)([a-zA-Z])" title="No spaces or numbers allowed">
             Last name: <input type="text" name="lastname" required required pattern="(^\S+)([a-zA-Z])" title="No spaces or numbers allowed">
             Score: <input type="number" name="score" min="0" required>
-            <input type="submit" value="Submit" class="buttonbutton" onclick="confirmsub()">
+            <input type="submit" value="Submit" class="buttonbutton">
         </form>
     </div>
     <div class="normalcontainer">
@@ -102,7 +102,7 @@
         </table>
     {% else %}
         {% if query %}
-            <p class="no-results">No items found matching "{{ query }}".</p>
+            <p class="no-results">No users found named "{{ query }}".</p>
         {% endif %}
     {% endif %}
 
