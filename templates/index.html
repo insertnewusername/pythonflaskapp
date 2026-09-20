@@ -28,8 +28,8 @@
     </div>
         <div class="normalcontainer">
             <form method="POST" id="ScoreForm">
-            Name: <input type="text" name="name" required required pattern="(^\S+)([a-zA-Z])" title="No spaces or numbers allowed">
-            Last name: <input type="text" name="lastname" required required pattern="(^\S+)([a-zA-Z])" title="No spaces or numbers allowed">
+            Name: <input type="text" name="name" required pattern="(^\S+)([A-Za-z]+)" title="No spaces or numbers allowed">
+            Last name: <input type="text" name="lastname" required pattern="(^\S+)([A-Za-z]+)" title="No spaces or numbers allowed">
             Score: <input type="number" name="score" min="0" required>
             <input type="submit" value="Submit" class="buttonbutton">
         </form>
