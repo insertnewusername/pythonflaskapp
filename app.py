@@ -89,13 +89,17 @@ def search():
         cur = conn.cursor()
 
         if query:
-            cur.execute('''
-                SELECT name, lastname, score FROM scores
-                WHERE name LIKE ? OR lastname LIKE ?
-                ORDER BY score ASC
-            ''', (f'%{query}%', f'%{query}%'))
-        else:
-            cur.execute('SELECT name, lastname, score FROM scores ORDER BY score ASC LIMIT 15')
+            sort = request.args.get('sort', 'score')  # default is score
+            sort_order = request.args.get('order', 'asc')
+        
+            if sort == 'name' and sort_order == 'asc':
+                cur.execute('SELECT name, lastname, score FROM scores WHERE name LIKE ? OR lastname LIKE ? ORDER BY name ASC', (f'%{query}%', f'%{query}%'))
+            elif sort == 'name' and sort_order == 'desc':
+                cur.execute('SELECT name, lastname, score FROM scores WHERE name LIKE ? OR lastname LIKE ? ORDER BY name DESC', (f'%{query}%', f'%{query}%'))
+            elif sort == 'score' and sort_order == 'asc':
+                cur.execute('SELECT name, lastname, score FROM scores WHERE name LIKE ? OR lastname LIKE ? ORDER BY score ASC', (f'%{query}%', f'%{query}%'))
+            else:
+                cur.execute('SELECT name, lastname, score FROM scores WHERE name LIKE ? OR lastname LIKE ? ORDER BY score DESC', (f'%{query}%', f'%{query}%'))
 
         entries = cur.fetchall()
 
