@@ -72,7 +72,7 @@
             <a href="/?q={{ query }}&order=desc&sort={{ request.args.get('sort', 'score') }}" title="descending">🔽</a>
         </div>
 
-        <form action="/search" method="get">
+        <form action="/" method="get">
             <input type="text" name="q" value="{{ query }}" placeholder="search for user">
             <button type="submit">Search</button>
         </form>
