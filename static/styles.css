@@ -647,3 +647,11 @@ input {
     background-color:var(--topbar-bg-color);
     border-color:var(--container-border-color);
 }
+
+
+.searchbar {
+    width: 50%;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 16px;
+}
