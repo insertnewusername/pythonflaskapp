@@ -93,5 +93,5 @@ if __name__ == "__main__":
 
 # Use this version when testing on your computer only
 
-#app.run(debug=True, host='0.0.0.0') 
+    #app.run(debug=True, host='0.0.0.0') 
 # Use this version if you want to test it on a phone/tablet connected to the same Wi-Fi
