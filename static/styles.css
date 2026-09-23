@@ -654,4 +654,9 @@ input {
     margin: 10px;
     padding: 5px;
     border-radius: 16px;
+    text-align:center;
+    color:black;
+    text-decoration:none;
+    background-color:#73b5eb;
 }
+
