@@ -20,14 +20,14 @@ if (savedTheme === 'dark') {
 }
 
 function darkmode() {
-  document.getElementById("toggleicon").src = "images/moon.png"
+  document.getElementById("toggleicon").src = "/static/images/moon.png"
   body.setAttribute('data-theme', 'dark')
   localStorage.setItem('theme', 'dark');/* localstorage so that the theme persists even if you leave page, enter another page etc*/
   toggler.checked = true; /* Fix checkbox problem*/
 }
 
 function lightmode() {
-  document.getElementById("toggleicon").src = "images/sun.png"
+  document.getElementById("toggleicon").src = "/static/images/sun.png"
    body.removeAttribute('data-theme');
    localStorage.setItem('theme', 'light');
   toggler.checked = false;
@@ -36,26 +36,33 @@ function lightmode() {
  
 
 
-/* CAROUSEL LOGIC */
+
 
 let slideIndex = 1;
-showslides(slideIndex);
+let slides = document.getElementsByClassName("slide");
+
+if (slides.length > 0) {
+  showslides(slideIndex);
+}
 
 function plusslides(n) {
-  showslides(slideIndex += n); /* Adds 1 to slide number*/
+  if (slides.length > 0) showslides(slideIndex += n); 
 }
 
 function currentslide(n) {
-  showslides(slideIndex = n);
+  if (slides.length > 0) showslides(slideIndex = n);
 }
 
 function showslides(n) {
   let i;
-  let slides = document.getElementsByClassName("slide");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  slides[slideIndex-1].style.display = "block";  
+  if (slides[slideIndex-1]) {
+    slides[slideIndex-1].style.display = "block";  
+  }
 }
+
+
