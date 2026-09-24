@@ -282,7 +282,7 @@ footer {
 }
 
 .cyberbanner {
-    background-image: background-image: url(images/CyberBanner.jpeg);
+    background-image: url(images/CyberBanner.jpeg);
     color: black; /* Overrides the white text colour for this banner */
 }
 
