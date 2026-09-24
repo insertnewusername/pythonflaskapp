@@ -1,6 +1,6 @@
 const ScoreForm = document.getElementById("ScoreForm");
 ScoreForm.addEventListener("submit", function () {
-alert("Submitted successfully");
+alert("Submitting...");
 });
 
 

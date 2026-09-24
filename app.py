@@ -1,9 +1,19 @@
 # Import the necessary modules from Flask and sqlite3
 from flask import Flask, render_template, request, redirect
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 import sqlite3
 
 # Create the Flask app
 app = Flask(__name__)
+
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    storage_uri="memory://",
+)
+
+
 
 # Name of the database file (don't change this unless you also update it below)
 DB_NAME = 'scores.db'
@@ -42,6 +52,7 @@ def init_db():
 
 #This specifies that the following function will run whenever there's any actions taken on the web page
 @app.route('/', methods=['GET', 'POST'])
+@limiter.limit("1 per minute", methods=["POST"]) # Allows 1 post request per minute
 
 
 # This function handles both displaying the leaderboard and submitting scores
@@ -122,11 +133,16 @@ def leaderboard():
             datasorter=realm_data["datasorter"])
 
 @app.route('/complete/<realm>', methods=['POST']) #Uses dynamic routing to prevent me from routing 4 times
+@limiter.limit("4 per minute", methods=["POST"]) # Allows 4 post request per minute
 def complete_realm(realm): #(realm is defined in <realm>)
     with sqlite3.connect(DB_NAME) as conn:
         conn.execute('UPDATE realms SET count = count + 1 WHERE realm = ?', (realm,))
     return redirect('/') #Redirects back to / (home)
 
+
+@app.errorhandler(429)
+def ratelimit_handler(e):
+    return render_template('429.html'), 429
 
 #----- Mainline program: This code executes when we run this file.-----#
 

@@ -53,11 +53,6 @@
                 </tr>
                     {% endif %}
                 {% endfor %} 
-                  {% if not hall.found %}
-                    <tr>
-                        <td colspan="4" class="no-results">No scores above 1000 yet</td>
-                    </tr>
-                    {% endif %}
             </table>
 
     </div>
@@ -95,7 +90,7 @@
         </table>
         
         {% if query and not entries %}
-            <p class="no-results">No users found named "{{ query }}"</p>
+            <p>No users found named "{{ query }}"</p>
         {% endif %}
     </div>
     <div class="normalcontainer">
