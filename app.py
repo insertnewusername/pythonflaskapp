@@ -55,9 +55,14 @@ def leaderboard():
 
 
         # Hall of fame
+
+        
         cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 5')
 
         halloffame = cur.fetchall()
+
+        cur.execute('SELECT AVG(score) FROM scores')
+        avg_result = cur.fetchone()
 
 
 
@@ -77,9 +82,9 @@ def leaderboard():
 
         entries = cur.fetchall()
 
-    
+    avg_value = avg_result[0] if avg_result else None
     # Send the HTML page with the most recent leaderboard
-    return render_template('index.html', halloffame=halloffame, entries=entries, query=query)
+    return render_template('index.html', halloffame=halloffame, entries=entries, query=query, average=avg_result)
 
 
 

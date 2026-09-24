@@ -91,16 +91,19 @@
             <p class="no-results">No users found named "{{ query }}"</p>
         {% endif %}
     </div>
-    <div class="statbox">
+    <div class="normalcontainer">
         <h1>Statistics</h1>
-        <div class="normalcontainer, statchild">
-            <h2>Fastest time</h2>
-        </div>
-        <div class="normalcontainer, statchild">
-            <h2>Slowest time</h2>
-        </div>
-        <div class="normalcontainer, statchild">
-            <h2>Average time</h2>
+        <div class="statbox">
+            <div class="normalcontainer, statchild">
+                <h2>Fastest time</h2>
+            </div>
+            <div class="normalcontainer, statchild">
+                <h2>Slowest time</h2>
+            </div>
+            <div class="normalcontainer, statchild">
+                <h2>Average time</h2>
+                {{ average }}
+            </div>
         </div>
     </div>
 

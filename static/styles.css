@@ -673,7 +673,3 @@ input, searchbar {
     justify-content:space-evenly;
     flex-wrap:wrap;
 }
-
-.statbox h1 {
-    padding:20px;
-}
