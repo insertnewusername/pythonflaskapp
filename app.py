@@ -25,6 +25,19 @@ def init_db():
                 score INTEGER NOT NULL
             )
         ''')
+        #Realms completion table
+        conn.execute('''
+            CREATE TABLE IF NOT EXISTS realms (
+                realm TEXT PRIMARY KEY,
+                count INTEGER NOT NULL
+            )
+        ''')
+
+        # Default values for realm table
+        conn.execute('INSERT OR IGNORE INTO realms (realm, count) VALUES ("thequizgame", 0)')
+        conn.execute('INSERT OR IGNORE INTO realms (realm, count) VALUES ("securitydefender", 0)')
+        conn.execute('INSERT OR IGNORE INTO realms (realm, count) VALUES ("bugblaster", 0)')
+        conn.execute('INSERT OR IGNORE INTO realms (realm, count) VALUES ("datasorter", 0)')
 
 #This specifies that the following function will run whenever there's any actions taken on the web page
 @app.route('/', methods=['GET', 'POST'])
@@ -52,20 +65,13 @@ def leaderboard():
     with sqlite3.connect(DB_NAME) as conn:
         cur = conn.cursor()
         # Get all name and score entries from the database (in order they were added)
-
-
         # Hall of fame
-
         
         cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 5')
 
         halloffame = cur.fetchall()
 
-
         #Stats section
-        cur.execute('SELECT AVG(score) FROM scores')
-        avgresult = cur.fetchone()
-
         cur.execute('SELECT AVG(score) FROM scores')
         avgresult = cur.fetchone()
 
@@ -76,9 +82,6 @@ def leaderboard():
         # Slowest time (highest score)
         cur.execute('SELECT MAX(score) FROM scores')
         maxresult = cur.fetchone()
-
-
-
 
         sort = request.args.get('sort', 'score')  # default is score
         sort_order = request.args.get('order', 'asc')
@@ -95,13 +98,31 @@ def leaderboard():
 
         entries = cur.fetchall()
 
-    avgscore = int(avgresult[0]) if avgresult else None #add a fallback so it won't crash if no scores
-    minscore = int(minresult[0]) if minresult else None
-    maxscore = int(maxresult[0]) if maxresult else None
+        cur.execute('SELECT realm, count FROM realms') #Realm completion
+        realm_data = dict(cur.fetchall()) # dict makes the data spit out as a list of pairs in brackets like ("thequizgame", 5), ("securitydefender", 2) etc 
 
-    # Send the HTML page with the most recent leaderboard
-    return render_template('index.html', halloffame=halloffame, entries=entries, query=query, average=avgscore, highest=maxscore, lowest=minscore)
+        avgscore = int(avgresult[0]) if avgresult else None #add a fallback so it won't crash if no scores
+        minscore = int(minresult[0]) if minresult else None
+        maxscore = int(maxresult[0]) if maxresult else None
 
+        # Send the HTML page with the most recent leaderboard and renders everything  
+        return render_template('' \
+            'index.html', 
+            halloffame=halloffame, 
+            entries=entries, query=query, 
+            average=avgscore, 
+            highest=maxscore, 
+            lowest=minscore, 
+            thequizgame=realm_data["thequizgame"],
+            securitydefender=realm_data["securitydefender"],
+            bugblaster=realm_data["bugblaster"],
+            datasorter=realm_data["datasorter"])
+
+@app.route('/complete/<realm>', methods=['POST']) #Uses dynamic routing to prevent me from routing 4 times
+def complete_realm(realm): #(realm is defined in <realm>)
+    with sqlite3.connect(DB_NAME) as conn:
+        conn.execute('UPDATE realms SET count = count + 1 WHERE realm = ?', (realm,))
+    return redirect('/') #Redirects back to / (home)
 
 
 #----- Mainline program: This code executes when we run this file.-----#

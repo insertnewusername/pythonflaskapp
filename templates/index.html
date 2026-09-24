@@ -118,28 +118,36 @@
             <div class="statchild">
                 <h3>The Quiz Game</h3>
                 <img src="{{ url_for('static', filename='images/triviagameai.png') }}" alt="Image Of The Quiz Game">
-                <button class="buttonbutton">Completed</button>
+                <form action="/complete/thequizgame" method="POST">
+                    <button class="buttonbutton">Completed</button>
+                </form>
                 <p>Completed by {{ thequizgame }} people</p>
             </div>
 
             <div class="statchild">
                 <h3>Security Defender</h3>
                 <img src="{{ url_for('static', filename='images/passworddefai.png') }}" alt="Image of Security Defender">
-                <button class="buttonbutton">Completed</button>
+                <form action="/complete/securitydefender" method="POST">
+                    <button class="buttonbutton">Completed</button>
+                </form>
                 <p>Completed by {{ securitydefender }} people</p>
             </div>
 
             <div class="statchild">
                 <h3>Bug Blaster</h3>
                 <img src="{{ url_for('static', filename='images/bugblasterai.png') }}" alt="Image of Bug Blaster">
-                <button class="buttonbutton">Completed</button>
+                <form action="/complete/bugblaster" method="POST">
+                    <button class="buttonbutton">Completed</button>
+                </form>
                 <p>Completed by {{ bugblaster }} people</p>
             </div>
 
             <div class="statchild">
                 <h3>Data Sorter</h3>
                 <img src="{{ url_for('static', filename='images/datasortai.png') }}" alt="Image of Data Sorter">
-                <button class="buttonbutton">Completed</button>
+                <form action="/complete/datasorter" method="POST">
+                    <button class="buttonbutton">Completed</button>
+                </form>
                 <p>Completed by {{ datasorter }} people</p>
             </div>
         </div>
