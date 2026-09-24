@@ -42,7 +42,7 @@
                     <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
                 </tr>
                 {% set hall = namespace(rank=0) %}
-                {% for name, lastname, score in halloffame %}
+                {% for name, lastname, score in hall_of_fame %}
                     {% if score | int > 1000 %}
                         {% set hall.rank = hall.rank + 1 %}
                 <tr>

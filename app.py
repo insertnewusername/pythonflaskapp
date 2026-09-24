@@ -13,7 +13,7 @@ limiter = Limiter(
     storage_uri="memory://",
 )
 
-VALIDREALMS = {'thequizgame', 'securitydefender', 'bugblaster', 'datasorter'} # whitelist for the valid realms
+VALID_REALMS = {'thequizgame', 'securitydefender', 'bugblaster', 'datasorter'} # whitelist for the valid realms
 
 # Name of the database file (don't change this unless you also update it below)
 DB_NAME = 'scores.db'
@@ -78,19 +78,19 @@ def leaderboard():
         # Hall of fame
         cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 5')
 
-        halloffame = cur.fetchall() 
+        hall_of_fame = cur.fetchall() 
 
         #Stats section
         cur.execute('SELECT AVG(score) FROM scores')
-        avgresult = cur.fetchone()
+        avg_result = cur.fetchone()
 
         # Fastest time (lowest score)
         cur.execute('SELECT MIN(score) FROM scores')
-        minresult = cur.fetchone()
+        min_result = cur.fetchone()
 
         # Slowest time (highest score)
         cur.execute('SELECT MAX(score) FROM scores')
-        maxresult = cur.fetchone()
+        max_result = cur.fetchone()
 
         sort = request.args.get('sort', 'score')  # default is score
         sort_order = request.args.get('order', 'asc')
@@ -111,20 +111,20 @@ def leaderboard():
         cur.execute('SELECT realm, count FROM realms') #Realm completion
         realm_data = dict(cur.fetchall()) # dict makes the data spit out as a "dictionary" in brackets like ("thequizgame", 5), ("securitydefender", 2) etc 
 
-        avgscore = int(avgresult[0]) if avgresult and avgresult[0] is not None else None # Add fallback for when scores.db is deleted
-        minscore = int(minresult[0]) if minresult and minresult[0] is not None else None
-        maxscore = int(maxresult[0]) if maxresult and maxresult[0] is not None else None
+        avg_score = int(avg_result[0]) if avg_result and avg_result[0] is not None else None # Add fallback for when scores.db is deleted
+        min_score = int(min_result[0]) if min_result and min_result[0] is not None else None
+        max_score = int(max_result[0]) if max_result and max_result[0] is not None else None
 
         
 
         # Send the HTML page with the most recent leaderboard and renders everything  
         return render_template(
             'index.html', 
-            halloffame=halloffame, 
+            hall_of_fame=hall_of_fame, 
             entries=entries, query=query, 
-            average=avgscore, 
-            highest=maxscore, 
-            lowest=minscore, 
+            average=avg_score, 
+            highest=max_score, 
+            lowest=min_score, 
             thequizgame=realm_data["thequizgame"],
             securitydefender=realm_data["securitydefender"],
             bugblaster=realm_data["bugblaster"],
@@ -133,7 +133,7 @@ def leaderboard():
 @app.route('/complete/<realm>', methods=['POST']) #Uses dynamic routing to prevent me from routing 4 times
 @limiter.limit("4 per minute", methods=["POST"]) # Allows 4 post request per minute
 def complete_realm(realm): #(realm is defined in <realm>)
-    if realm not in VALIDREALMS:
+    if realm not in VALID_REALMS:
         return redirect('/')  # ignore unknown realm url
     with sqlite3.connect(DB_NAME) as conn:
         conn.execute('UPDATE realms SET count = count + 1 WHERE realm = ?', (realm,))
@@ -141,7 +141,7 @@ def complete_realm(realm): #(realm is defined in <realm>)
 
 
 @app.errorhandler(429) #What happens when you get rate limited
-def ratelimit_handler(e):
+def rate_limit_handler(e):
     return render_template('429.html'), 429 #Renders 429.html
 
 @app.errorhandler(405) #Error handling for bad url get requests
