@@ -82,7 +82,7 @@ def leaderboard():
 
         entries = cur.fetchall()
 
-    avg_value = avg_result[0] if avg_result else None
+    avg_value = avg_result[0] if avg_result else None #add a fallback so it won't crash if no scores
     # Send the HTML page with the most recent leaderboard
     return render_template('index.html', halloffame=halloffame, entries=entries, query=query, average=avg_result)
 
