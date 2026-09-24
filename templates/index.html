@@ -91,13 +91,17 @@
             <p class="no-results">No users found named "{{ query }}"</p>
         {% endif %}
     </div>
-
-    <div class="normalcontainer, statbox">
+    <div class="statbox">
         <h1>Statistics</h1>
-        <div class="normalcontainer">
-
+        <div class="normalcontainer, statchild">
+            <h2>Fastest time</h2>
         </div>
-
+        <div class="normalcontainer, statchild">
+            <h2>Slowest time</h2>
+        </div>
+        <div class="normalcontainer, statchild">
+            <h2>Average time</h2>
+        </div>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

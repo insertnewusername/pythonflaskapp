@@ -661,7 +661,19 @@ input, searchbar {
     text-decoration:none;
 }
 
+.statchild {
+    width:20%;
+}
+
 .statbox {
     display:flex;
-    
+    background-color: var(--container-bg-color);
+    border: 3px solid var(--container-border-color);
+    border-radius: 10px;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+}
+
+.statbox h1 {
+    padding:20px;
 }
