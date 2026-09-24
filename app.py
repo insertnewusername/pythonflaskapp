@@ -13,7 +13,7 @@ limiter = Limiter(
     storage_uri="memory://",
 )
 
-
+VALIDREALMS = {'thequizgame', 'securitydefender', 'bugblaster', 'datasorter'} # whitelist for the valid realms
 
 # Name of the database file (don't change this unless you also update it below)
 DB_NAME = 'scores.db'
@@ -135,14 +135,20 @@ def leaderboard():
 @app.route('/complete/<realm>', methods=['POST']) #Uses dynamic routing to prevent me from routing 4 times
 @limiter.limit("4 per minute", methods=["POST"]) # Allows 4 post request per minute
 def complete_realm(realm): #(realm is defined in <realm>)
+    if realm not in VALIDREALMS:
+        return redirect('/')  # ignore unknown realm url
     with sqlite3.connect(DB_NAME) as conn:
         conn.execute('UPDATE realms SET count = count + 1 WHERE realm = ?', (realm,))
     return redirect('/') #Redirects back to / (home)
 
 
-@app.errorhandler(429)
+@app.errorhandler(429) #What happens when you get rate limited
 def ratelimit_handler(e):
-    return render_template('429.html'), 429
+    return render_template('429.html'), 429 #Renders 429.html
+
+@app.errorhandler(405)
+def method_not_allowed(e):
+    return redirect('/')
 
 #----- Mainline program: This code executes when we run this file.-----#
 
