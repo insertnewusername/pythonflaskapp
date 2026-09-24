@@ -672,4 +672,5 @@ input, searchbar {
     border-radius: 10px;
     justify-content:space-evenly;
     flex-wrap:wrap;
+    padding: 5px;
 }

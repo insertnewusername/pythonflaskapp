@@ -25,6 +25,7 @@
     <div class="normalcontainer">
         <h1>Submit Your Score</h1>
         <h2>Put below your details, as well as your score, which is how many seconds it took you to beat the game!</h2>
+        <h3>(People who get a time of more than 1000 will be placed in the hall of shame!)</h3>
     </div>
         <div class="normalcontainer">
             <form method="POST" id="ScoreForm">
@@ -96,16 +97,41 @@
         <div class="statbox">
             <div class="normalcontainer, statchild">
                 <h2>Fastest time</h2>
+                <p>{{ lowest }}</p>
             </div>
             <div class="normalcontainer, statchild">
                 <h2>Slowest time</h2>
+                <p>{{ highest }}</p>
             </div>
             <div class="normalcontainer, statchild">
                 <h2>Average time</h2>
-                {{ average }}
+                <p>{{ average }}</p>
             </div>
         </div>
     </div>
+
+    <div class="normalcontainer">
+        <h1>Realms Completion</h1>
+        <p>Record all the realms that you have conquered!</p>
+        <div class="statbox">
+            <div class="normalcontainer, statchild">
+                <h2>The Quiz Game</h2>
+            </div>
+
+            <div class="normalcontainer, statchild">
+                <h2>Security Defender</h2>
+            </div>
+
+            <div class="normalcontainer, statchild">
+                <h2>Bug Blaster</h2>
+            </div>
+
+            <div class="normalcontainer, statchild">
+                <h2>Data Sorter</h2>
+            </div>
+        </div>
+    </div>
+
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

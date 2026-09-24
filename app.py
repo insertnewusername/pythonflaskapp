@@ -61,8 +61,21 @@ def leaderboard():
 
         halloffame = cur.fetchall()
 
+
+        #Stats section
         cur.execute('SELECT AVG(score) FROM scores')
-        avg_result = cur.fetchone()
+        avgresult = cur.fetchone()
+
+        cur.execute('SELECT AVG(score) FROM scores')
+        avgresult = cur.fetchone()
+
+        # Fastest time (lowest score)
+        cur.execute('SELECT MIN(score) FROM scores')
+        minresult = cur.fetchone()
+
+        # Slowest time (highest score)
+        cur.execute('SELECT MAX(score) FROM scores')
+        maxresult = cur.fetchone()
 
 
 
@@ -82,9 +95,12 @@ def leaderboard():
 
         entries = cur.fetchall()
 
-    avg_value = avg_result[0] if avg_result else None #add a fallback so it won't crash if no scores
+    avgscore = int(avgresult[0]) if avgresult else None #add a fallback so it won't crash if no scores
+    minscore = int(minresult[0]) if minresult else None
+    maxscore = int(maxresult[0]) if maxresult else None
+
     # Send the HTML page with the most recent leaderboard
-    return render_template('index.html', halloffame=halloffame, entries=entries, query=query, average=avg_result)
+    return render_template('index.html', halloffame=halloffame, entries=entries, query=query, average=avgscore, highest=maxscore, lowest=minscore)
 
 
 
