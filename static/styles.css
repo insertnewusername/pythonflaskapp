@@ -66,7 +66,7 @@ img {
 
 .bigimg {
     width: 900px;
-    height:500px;
+    height:400px;
     margin: 20px; /* margin instead of paddinsg so it still has the border radius */
 
 }
@@ -277,17 +277,17 @@ footer {
 }
 
 .securitybanner {
-     background-image: url(https://static.vecteezy.com/system/resources/previews/007/950/908/non_2x/green-grass-field-with-blue-sky-ad-white-cloud-nature-landscape-background-free-photo.jpg);
+     background-image: url(images/securitybanner.png);
      color:black
 }
 
 .cyberbanner {
-    background-image: url(https://img.freepik.com/premium-vector/cartoon-bank-vault-with-money-vector-illustration_264840-7.jpg?w=996);
+    background-image: background-image: url(images/CyberBanner.jpeg);
     color: black; /* Overrides the white text colour for this banner */
 }
 
 .fishbanner {
-    background-image: url(https://img.pikbest.com/wp/202345/ocean-fish-cartoon-of-swimming-in-the_9612565.jpg!bw700);
+    background-image: url(images/fishbanner1.png);
 }
 
 
