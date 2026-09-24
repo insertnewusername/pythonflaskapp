@@ -1,7 +1,3 @@
-const ScoreForm = document.getElementById("ScoreForm");
-ScoreForm.addEventListener("submit", function () {
-alert("Submitted successfully");
-});
 
 
 var body = document.body;  /* Targets document body */
@@ -32,4 +28,33 @@ function lightmode() {
    localStorage.setItem('theme', 'light');
   toggler.checked = false;
 
+}
+ 
+
+
+
+let slideIndex = 1;
+
+function showslides(n) {
+  let slides = document.getElementsByClassName("slide");
+
+  if (slides.length === 0) return;
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+}
+
+showslides(slideIndex);
+
+function plusslides(n) {
+  showslides(slideIndex += n);
+}
+
+function currentslide(n) {
+  showslides(slideIndex = n);
 }
