@@ -661,3 +661,7 @@ input, searchbar {
     text-decoration:none;
 }
 
+.statbox {
+    display:flex;
+    
+}
