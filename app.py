@@ -1,6 +1,6 @@
 # Import the necessary modules from Flask and sqlite3
 from flask import Flask, render_template, request, redirect
-from flask_limiter import Limiter
+from flask_limiter import Limiter # IMPORTANT INSTALL FLASK-LIMITER CORRECTLY OR ELSE THIS WHOLE THING WILL NOT WORK
 from flask_limiter.util import get_remote_address
 import sqlite3
 
@@ -53,8 +53,6 @@ def init_db():
 #This specifies that the following function will run whenever there's any actions taken on the web page
 @app.route('/', methods=['GET', 'POST'])
 @limiter.limit("1 per minute", methods=["POST"]) # Allows 1 post request per minute
-
-
 # This function handles both displaying the leaderboard and submitting scores
 def leaderboard():
     # If someone has submitted the form (POST request), save their data
@@ -146,7 +144,7 @@ def complete_realm(realm): #(realm is defined in <realm>)
 def ratelimit_handler(e):
     return render_template('429.html'), 429 #Renders 429.html
 
-@app.errorhandler(405)
+@app.errorhandler(405) #Error handling for bad url get requests
 def method_not_allowed(e):
     return redirect('/')
 
@@ -155,9 +153,8 @@ def method_not_allowed(e):
 init_db()  # Set up the database before starting the web app
 
 # Start the Flask server for local testing (Comment the version not being used)
-if __name__ == "__main__":
+if __name__ == "__main__": #did the if name is main thing for testing on render
     app.run(debug=True)
-
 # Use this version when testing on your computer only
 
     #app.run(debug=True, host='0.0.0.0') 
