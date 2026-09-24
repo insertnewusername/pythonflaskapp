@@ -1,5 +1,5 @@
 
-
+// IMPORTANT: THIS JAVASCRIPT IS ONLY FOR THE OLD STATIC HTML PAGES. THE JAVASCRIPT FOR THE FLASK IS IN SCRIPT.JS, did this so no conflicting code
 var body = document.body;  /* Targets document body */
 var toggler = document.getElementById('toggler');
 document.getElementById('toggler').addEventListener('change', (event) => {

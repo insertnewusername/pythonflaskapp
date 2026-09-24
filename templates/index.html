@@ -25,7 +25,7 @@
     <div class="normalcontainer">
         <h1>Submit Your Score</h1>
         <h2>Put below your details, as well as your score, which is how many seconds it took you to beat the game!</h2>
-        <h3>(People who get a time of more than 1000 will be placed in the hall of shame!)</h3>
+        <h3>(People who get a time of more than 1000 (around 17 mins) will be placed in the hall of shame!)</h3>
     </div>
         <div class="normalcontainer">
             <form method="POST" id="ScoreForm">
@@ -53,6 +53,11 @@
                 </tr>
                     {% endif %}
                 {% endfor %} 
+                  {% if not hall.found %}
+                    <tr>
+                        <td colspan="4" class="no-results">No scores above 1000 yet</td>
+                    </tr>
+                    {% endif %}
             </table>
 
     </div>
@@ -77,7 +82,7 @@
             <input type="text" name="q" value="{{ query }}" placeholder="search for user" class="searchbar">
             <button type="submit" class="searchbutton">Search</button>
         </form>
-
+        
         <table>
             <tr>
                 <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
@@ -86,8 +91,9 @@
             <tr>
                 <td class= "{% if loop.index == 1 %}gold{% elif loop.index == 2 %}silver{% elif loop.index == 3 %}bronze{% endif %}">{{loop.index}}.</td><td>{{ name }}</td> <td>{{lastname}}</td> <td>{{ score }}</td>
             </tr>
-            {% endfor %}    
+            {% endfor %}
         </table>
+        
         {% if query and not entries %}
             <p class="no-results">No users found named "{{ query }}"</p>
         {% endif %}

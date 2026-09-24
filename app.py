@@ -13,10 +13,11 @@ DB_NAME = 'scores.db'
 def init_db():
     # Connect to the SQLite database (it will be created if it doesn't exist)
     with sqlite3.connect(DB_NAME) as conn:
-        # Create the 'scores' table with three columns:
+        # Create the 'scores' table with four columns:
         # - id: an auto-incrementing number (primary key)
         # - name: the player's name
         # - score: the player's score
+        # and a lastname 
         conn.execute('''
             CREATE TABLE IF NOT EXISTS scores (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -47,8 +48,8 @@ def init_db():
 def leaderboard():
     # If someone has submitted the form (POST request), save their data
     if request.method == 'POST':
-        # Get the name and score that the player entered in the form
-        name = request.form['name']
+        # Get the names and score that the player entered in the form
+        name = request.form['name'] #Grabs user data that was submitted in the form
         lastname = request.form['lastname']
         score = request.form['score']
         
@@ -64,12 +65,11 @@ def leaderboard():
     query = request.args.get('q', '').strip()
     with sqlite3.connect(DB_NAME) as conn:
         cur = conn.cursor()
-        # Get all name and score entries from the database (in order they were added)
+        # Get  name and score entries from the database that fit hall of fame criteria
         # Hall of fame
-        
         cur.execute('SELECT name, lastname, score FROM scores ORDER BY score DESC LIMIT 5')
 
-        halloffame = cur.fetchall()
+        halloffame = cur.fetchall() 
 
         #Stats section
         cur.execute('SELECT AVG(score) FROM scores')
@@ -85,9 +85,10 @@ def leaderboard():
 
         sort = request.args.get('sort', 'score')  # default is score
         sort_order = request.args.get('order', 'asc')
-        
+
+        #Sorting ascending, descending, score/ name
         if sort == 'name' and sort_order == 'asc':
-            cur.execute('SELECT name, lastname, score FROM scores WHERE name LIKE ? OR lastname LIKE ? ORDER BY name ASC LIMIT 15', (f'%{query}%', f'%{query}%'))
+            cur.execute('SELECT name, lastname, score FROM scores WHERE name LIKE ? OR lastname LIKE ? ORDER BY name ASC LIMIT 15', (f'%{query}%', f'%{query}%')) #the (f%`query`) checks for scores that contain what the user entered in searchbar. The reason there is two is because it checks both firstname and lastname, for example, searching "bob" , it would filter out scores that have either or both firstnae/lastname container bob
         elif sort == 'name' and sort_order == 'desc':
             cur.execute('SELECT name, lastname, score FROM scores WHERE name LIKE ? OR lastname LIKE ? ORDER BY name DESC LIMIT 15', (f'%{query}%', f'%{query}%'))
         elif sort == 'score' and sort_order == 'asc':
@@ -99,11 +100,13 @@ def leaderboard():
         entries = cur.fetchall()
 
         cur.execute('SELECT realm, count FROM realms') #Realm completion
-        realm_data = dict(cur.fetchall()) # dict makes the data spit out as a list of pairs in brackets like ("thequizgame", 5), ("securitydefender", 2) etc 
+        realm_data = dict(cur.fetchall()) # dict makes the data spit out as a "dictionary" in brackets like ("thequizgame", 5), ("securitydefender", 2) etc 
 
-        avgscore = int(avgresult[0]) if avgresult else None #add a fallback so it won't crash if no scores
-        minscore = int(minresult[0]) if minresult else None
-        maxscore = int(maxresult[0]) if maxresult else None
+        avgscore = int(avgresult[0]) if avgresult and avgresult[0] is not None else None # Add fallback for when scores.db is deleted
+        minscore = int(minresult[0]) if minresult and minresult[0] is not None else None
+        maxscore = int(maxresult[0]) if maxresult and maxresult[0] is not None else None
+
+        
 
         # Send the HTML page with the most recent leaderboard and renders everything  
         return render_template(
