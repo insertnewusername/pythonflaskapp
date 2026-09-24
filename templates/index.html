@@ -95,15 +95,15 @@
     <div class="normalcontainer">
         <h1>Statistics</h1>
         <div class="statbox">
-            <div class="normalcontainer, statchild">
+            <div class="normalcontainer statchild">
                 <h2>Fastest time</h2>
                 <p>{{ lowest }}</p>
             </div>
-            <div class="normalcontainer, statchild">
+            <div class="normalcontainer statchild">
                 <h2>Slowest time</h2>
                 <p>{{ highest }}</p>
             </div>
-            <div class="normalcontainer, statchild">
+            <div class="normalcontainer statchild">
                 <h2>Average time</h2>
                 <p>{{ average }}</p>
             </div>
@@ -115,7 +115,7 @@
         <h1>Realms Completion</h1>
         <p>Record all the realms that you have conquered!</p>
         <div class="statbox">
-            <div class="statchild">
+            <div class="statchild normalcontainer">
                 <h3>The Quiz Game</h3>
                 <img src="{{ url_for('static', filename='images/triviagameai.png') }}" alt="Image Of The Quiz Game">
                 <form action="/complete/thequizgame" method="POST">
@@ -124,7 +124,7 @@
                 <p>Completed by {{ thequizgame }} people</p>
             </div>
 
-            <div class="statchild">
+            <div class="statchild normalcontainer">
                 <h3>Security Defender</h3>
                 <img src="{{ url_for('static', filename='images/passworddefai.png') }}" alt="Image of Security Defender">
                 <form action="/complete/securitydefender" method="POST">
@@ -133,7 +133,7 @@
                 <p>Completed by {{ securitydefender }} people</p>
             </div>
 
-            <div class="statchild">
+            <div class="statchild normalcontainer">
                 <h3>Bug Blaster</h3>
                 <img src="{{ url_for('static', filename='images/bugblasterai.png') }}" alt="Image of Bug Blaster">
                 <form action="/complete/bugblaster" method="POST">
@@ -142,7 +142,7 @@
                 <p>Completed by {{ bugblaster }} people</p>
             </div>
 
-            <div class="statchild">
+            <div class="statchild normalcontainer">
                 <h3>Data Sorter</h3>
                 <img src="{{ url_for('static', filename='images/datasortai.png') }}" alt="Image of Data Sorter">
                 <form action="/complete/datasorter" method="POST">

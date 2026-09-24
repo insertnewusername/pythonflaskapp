@@ -106,7 +106,7 @@ def leaderboard():
         maxscore = int(maxresult[0]) if maxresult else None
 
         # Send the HTML page with the most recent leaderboard and renders everything  
-        return render_template('' \
+        return render_template(
             'index.html', 
             halloffame=halloffame, 
             entries=entries, query=query, 

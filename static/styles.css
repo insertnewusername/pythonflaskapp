@@ -667,13 +667,9 @@ input, searchbar {
 
 .statbox {
     display:flex;
-    background-color: var(--container-bg-color);
-    border: 3px solid var(--container-border-color);
-    border-radius: 10px;
     justify-content:space-evenly;
     flex-wrap:wrap;
-    padding: 5px;
-    padding-bottom: 10px;
+
 }
 
 
