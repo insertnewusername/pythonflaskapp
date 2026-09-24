@@ -116,23 +116,31 @@
         <p>Record all the realms that you have conquered!</p>
         <div class="statbox">
             <div class="normalcontainer, statchild">
-                <h2>The Quiz Game</h2>
-                <img src="images/triviagameai.png" alt="Image Of The Quiz Game">
+                <h3>The Quiz Game</h3>
+                <img src="{{ url_for('static', filename='images/triviagameai.png') }}" alt="Image Of The Quiz Game">
+                <p>Completed by {{ thequizgame }} amount of people</p>
+                <button>Completed</button>
             </div>
 
             <div class="normalcontainer, statchild">
-                <h2>Security Defender</h2>
-                <img src="images/passworddefai.png" alt="Image of Security Defender">
+                <h3>Security Defender</h3>
+                <img src="{{ url_for('static', filename='images/passworddefai.png') }}" alt="Image of Security Defender">
+                <p>Completed by {{ securitydefender }} amount of people</p>
+                <button>Completed</button>
             </div>
 
             <div class="normalcontainer, statchild">
-                <h2>Bug Blaster</h2>
-                <img src="images/bugblasterai.png" alt="Image of Bug Blaster">
+                <h3>Bug Blaster</h3>
+                <img src="{{ url_for('static', filename='images/bugblasterai.png') }}" alt="Image of Bug Blaster">
+                <p>Completed by {{ bugblaster }} amount of people</p>
+                <button>Completed</button>
             </div>
 
             <div class="normalcontainer, statchild">
-                <h2>Data Sorter</h2>
-                <img src="images/datasortai.png" alt="Image of Data Sorter">
+                <h3>Data Sorter</h3>
+                <img src="{{ url_for('static', filename='images/datasortai.png') }}" alt="Image of Data Sorter">
+                <p>Completed by {{ datasorter }} amount of people</p>
+                <button>Completed</button>
             </div>
         </div>
     </div>

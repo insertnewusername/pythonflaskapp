@@ -676,6 +676,7 @@ input, searchbar {
 }
 
 
-.smallimg {
-    
+.statbox img {
+    width: 80%;
+    height: 60%;
 }
