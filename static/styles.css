@@ -673,6 +673,7 @@ input, searchbar {
     justify-content:space-evenly;
     flex-wrap:wrap;
     padding: 5px;
+    padding-bottom: 10px;
 }
 
 
