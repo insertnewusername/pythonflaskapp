@@ -3,8 +3,7 @@
 Within this year I've been introduced to hackclub, I've been learning a few languages. HTML, css, touched a bit on javascript, and godot.
 I thought it would be a suitable time now to introduce myself to python
 This project was built using python, html, css, little javascript, sql, jinjascript, and some other stuff
-Pls ignore the negative number as I was testing it, u can't add negative numbers as scores anymore now btw
-Also the entire scoring system is fake and made up
+Theres this leaderboard and submission thing where you can submit the time it took u to speedrun minecraft!
 
 This project was mainly for me to learn about python and stuff related to it, like sql, jinjascript etc.
 
@@ -12,9 +11,16 @@ I've made a simple scoreboard project, where you enter your name, and score, it 
 
 As this was a sample project for me to learn python, I really didn't want to create a new file with brand new css etc, so I just reused one of my previous projects and integrated this into it
 
-Submitting this to live early as I don't want it to end and then I ship. I'll submit an update to the project soon.
+<h2>Features</h2>
+Uses python <br>
+Has a leaderboard system<br>
+Is really cool <br>
+Uses sql backend!<br>
+
+This is a project for 3am! (changed my mind bout submitting to live)
 
 Project url: https://pythonflaskapp-fdj0.onrender.com
+PLEASE NOTE IT MAY TAKE A WHILE FOR IT TO LOAD
 
 Screenshots
 
