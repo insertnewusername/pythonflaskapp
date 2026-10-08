@@ -1,5 +1,18 @@
-/* Light mode theme :root means that it's the default */
+
+
+/*Colour theme for when toggled on dark mode, will use these variables*/
 :root, [data-theme="default"] {
+    --body-bg-color:#0E1A24;
+    --container-bg-color:#172D3E;
+    --container-border-color:#3587A4;
+    --topbar-bg-color:#315776;
+    --text-color:#ffffff;
+    --gameicons-bg-color:#225276;
+    --gdbackground: linear-gradient(to bottom right, #003399 0%, #99ccff 100%);
+}
+
+/* Light mode theme :root means that it's the default */
+ [data-theme="light"] {
     --body-bg-color:#C1DFF0; /* This is a hex coluor*/
     --container-bg-color:#88CCF1;
     --container-border-color:#3587A4;
@@ -9,16 +22,6 @@
     --gdbackground: linear-gradient(to bottom right, #3366cc 0%, #66ffff 100%); /* This is a gradient */
 }
 
-/*Colour theme for when toggled on dark mode, will use these variables*/
-[data-theme="dark"] {
-    --body-bg-color:#0E1A24;
-    --container-bg-color:#172D3E;
-    --container-border-color:#3587A4;
-    --topbar-bg-color:#315776;
-    --text-color:#ffffff;
-    --gameicons-bg-color:#225276;
-    --gdbackground: linear-gradient(to bottom right, #003399 0%, #99ccff 100%);
-}
 
 
 
