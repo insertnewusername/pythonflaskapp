@@ -8,10 +8,6 @@
 <body>
             <div class="normalcontainer Webtitle">
             <span class="title">Project Cyber</span>
-            <label class="switch">
-                <input id="toggler" type="checkbox">
-                <img class="pressbutton" id="toggleicon" src="{{ url_for('static', filename='images/sun.png') }}"  alt="sun moon icon"> <!--Default is light, so sun.png, javascript swap it for moon.png when toggled-->
-            </label>
         </div>
 
         <div class="Navigationbar normalcontainer">
@@ -23,8 +19,8 @@
         </div>
 
     <div class="normalcontainer">
-        <h1>Submit Your Score</h1>
-        <h2>Put below your details, as well as your score, which is how many seconds it took you to beat the game!</h2>
+        <h1>Minecraft speedruns</h1>
+        <h2>Put below your details, as well as your score, which is how many seconds it took you to beat minecraft!</h2>
         <h3>(People who get a time of more than 1000 (around 17 mins) will be placed in the hall of shame!)</h3>
     </div>
         <div class="normalcontainer">
@@ -113,12 +109,12 @@
 
 
     <div class="normalcontainer">
-        <h1>Realms Completion</h1>
-        <p>Record all the realms that you have conquered!</p>
+        <h1>Games Completion</h1>
+        <p>Record all the games you have played before!</p>
         <div class="statbox">
             <div class="statchild normalcontainer">
-                <h3>The Quiz Game</h3>
-                <img src="{{ url_for('static', filename='images/triviagameai.png') }}" alt="Image Of The Quiz Game">
+                <h3>Minecraft</h3>
+                <img src="{{ url_for('static', filename='images/triviagameai.png') }}" alt="Minecraft">
                 <form action="/complete/thequizgame" method="POST">
                     <button class="buttonbutton">Completed</button>
                 </form>
@@ -126,8 +122,8 @@
             </div>
 
             <div class="statchild normalcontainer">
-                <h3>Security Defender</h3>
-                <img src="{{ url_for('static', filename='images/passworddefai.png') }}" alt="Image of Security Defender">
+                <h3>Roblox</h3>
+                <img src="{{ url_for('static', filename='images/passworddefai.png') }}" alt="Image of Roblox">
                 <form action="/complete/securitydefender" method="POST">
                     <button class="buttonbutton">Completed</button>
                 </form>
@@ -135,8 +131,8 @@
             </div>
 
             <div class="statchild normalcontainer">
-                <h3>Bug Blaster</h3>
-                <img src="{{ url_for('static', filename='images/bugblasterai.png') }}" alt="Image of Bug Blaster">
+                <h3>Clash Royale</h3>
+                <img src="{{ url_for('static', filename='images/bugblasterai.png') }}" alt="Image of Clash Royale">
                 <form action="/complete/bugblaster" method="POST">
                     <button class="buttonbutton">Completed</button>
                 </form>
@@ -144,8 +140,8 @@
             </div>
 
             <div class="statchild normalcontainer">
-                <h3>Data Sorter</h3>
-                <img src="{{ url_for('static', filename='images/datasortai.png') }}" alt="Image of Data Sorter">
+                <h3>GTA VII</h3>
+                <img src="{{ url_for('static', filename='images/datasortai.png') }}" alt="Image of impossible">
                 <form action="/complete/datasorter" method="POST">
                     <button class="buttonbutton">Completed</button>
                 </form>
