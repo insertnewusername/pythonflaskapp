@@ -102,43 +102,43 @@
 
 
     <div class="normalcontainer">
-        <h1>Games Completion</h1>
-        <p>Record all the games you have played before!</p>
+        <h1>Scavenger logs</h1>
+        <p>Record all the items you've seen so far!</p>
         <div class="statbox">
             <div class="statchild normalcontainer">
-                <h3>Minecraft</h3>
+                <h3>Pumpkin</h3>
                 <img src="{{ url_for('static', filename='images/minecraft.png') }}" alt="Minecraft">
                 <form action="/complete/thequizgame" method="POST">
-                    <button class="buttonbutton">Played</button>
+                    <button class="buttonbutton">Yes</button>
                 </form>
-                <h5>Played by {{ thequizgame }} people</h5>
+                <h5>In common with {{ thequizgame }} people</h5>
             </div>
 
             <div class="statchild normalcontainer">
-                <h3>Roblox</h3>
+                <h3>Bats</h3>
                 <img src="{{ url_for('static', filename='images/roblox.png') }}" alt="Image of Roblox">
                 <form action="/complete/securitydefender" method="POST">
-                    <button class="buttonbutton">Played</button>
+                    <button class="buttonbutton">Yes</button>
                 </form>
-                <h5>Played by {{ securitydefender }} people</h5>
+                <h5>In common with {{ securitydefender }} people</h5>
             </div>
 
             <div class="statchild normalcontainer">
-                <h3>Clash Royale</h3>
+                <h3>Candy</h3>
                 <img src="{{ url_for('static', filename='images/clashroyale.png') }}" alt="Image of Clash Royale">
                 <form action="/complete/bugblaster" method="POST">
-                    <button class="buttonbutton">Played</button>
+                    <button class="buttonbutton">Yes</button>
                 </form>
-                <h5>Played by {{ bugblaster }} people</h5>
+                <h5>In common with {{ bugblaster }} people</h5>
             </div>
 
             <div class="statchild normalcontainer">
-                <h3>GTA VII</h3>
+                <h3>Something that scared you</h3>
                 <img src="{{ url_for('static', filename='images/mystery.png') }}" alt="Image of impossible">
                 <form action="/complete/datasorter" method="POST">
-                    <button class="buttonbutton">Played</button>
+                    <button class="buttonbutton">Yes</button>
                 </form>
-                <h5>Played by {{ datasorter }} people</h5>
+                <h5>In common with {{ datasorter }} people</h5>
             </div>
         </div>
     </div>

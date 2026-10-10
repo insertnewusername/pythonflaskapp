@@ -52,7 +52,7 @@ def init_db():
 
 #This specifies that the following function will run whenever there's any actions taken on the web page
 @app.route('/', methods=['GET', 'POST'])
-@limiter.limit("100 per minute", methods=["POST"]) # Allows 1 post request per minute
+@limiter.limit("1 per minute", methods=["POST"]) # Allows 1 post request per minute
 # This function handles both displaying the leaderboard and submitting scores
 def leaderboard():
     # If someone has submitted the form (POST request), save their data
