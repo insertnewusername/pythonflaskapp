@@ -10,6 +10,10 @@ This project was mainly for me to learn about python and stuff related to it, li
 I've made a simple scoreboard project, where you enter your name, and score, it puts the stuff in scores.db, and then shows u the leaderboard
 
 As this was a sample project for me to learn python, I really didn't want to create a new file with brand new css etc, so I just reused one of my previous projects and integrated this into it. Feel free to ignore the static sites
+<h2>Notes</h2>
+
+For 3am, I originally thought it just needed to be a dark themed website, later got leaderboard to be based on whichever child racks up the most lollies, hopefully that's good enough for the theme, as I don't really see the point of putting in like js static images wherever yk
+
 
 <h2>Features</h2>
 Uses python <br>
