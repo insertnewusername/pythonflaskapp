@@ -7,28 +7,28 @@
 </head>
 <body>
             <div class="normalcontainer Webtitle">
-            <span class="title">Project Cyber</span>
+            <span class="title">Run around stranger's houses!</span>
         </div>
 
 
     <div class="normalcontainer">
-        <h1>Minecraft speedruns</h1>
-        <h2>Put below your details, as well as your score, which is how many seconds it took you to beat minecraft!</h2>
-        <h3>(People who get a time of more than 1000 (around 17 mins) will be placed in the hall of shame! Pros onlyy)</h3>
+        <h1>Diabetes speedruns</h1>
+        <h2>Put below your details, as well as how many lollies you got running around from stranger's houses!!!</h2>
+        <h3>(People who get more than 1000 lollies will be placed in the sugar rush gang)</h3>
     </div>
         <div class="normalcontainer">
             <form method="POST" id="ScoreForm">
             Name: <input type="text" name="name" required pattern="(^\S+)([A-Za-z]+)" title="No spaces or numbers allowed, must be more than 1 character">
             Last name: <input type="text" name="lastname" required pattern="(^\S+)([A-Za-z]+)" title="No spaces or numbers allowed must be more than 1 character">
-            Score: <input type="number" name="score" min="0" required>
+            Lollies: <input type="number" name="score" min="0" required>
             <input type="submit" value="Submit" class="buttonbutton">
         </form>
     </div>
     <div class="normalcontainer">
-        <h1>Hall of Shame</h1>
+        <h1>Sugar rush gang</h1>
             <table>
                 <tr>
-                    <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
+                    <th>Rank</th><th>Name</th><th>Last Name</th><th>Lollies</th>
                 </tr>
                 {% set hall = namespace(rank=0) %}
                 {% for name, lastname, score in hall_of_fame %}
@@ -69,7 +69,7 @@
         
         <table>
             <tr>
-                <th>Rank</th><th>Name</th><th>Last Name</th><th>Score</th>
+                <th>Rank</th><th>Name</th><th>Last Name</th><th>Lollies</th>
             </tr>
             {% for name, lastname, score in entries %}
             <tr>
@@ -86,16 +86,16 @@
         <h1>Statistics</h1>
         <div class="statbox">
             <div class="normalcontainer statchild">
-                <h2>Fastest time</h2>
-                <p>{{ lowest }}</p>
+                <h2>Fattest person</h2>
+                <p>{{ lowest }} lollies</p>
             </div>
             <div class="normalcontainer statchild">
-                <h2>Slowest time</h2>
-                <p>{{ highest }}</p>
+                <h2>Sadest person</h2>
+                <p>{{ highest }} lollies</p>
             </div>
             <div class="normalcontainer statchild">
-                <h2>Average time</h2>
-                <p>{{ average }}</p>
+                <h2>Average heist</h2>
+                <p>{{ average }} lollies</p>
             </div>
         </div>
     </div>
