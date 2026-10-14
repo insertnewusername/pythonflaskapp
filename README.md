@@ -2,7 +2,6 @@
 
 Within this year I've been introduced to hackclub, I've been learning a few languages. HTML, CSS, touched a bit on javascript, and godot.
 I thought it would be a suitable time now to introduce myself to python
-This project was built using python, HTML, CSS, a little javascript, SQL, jinjascript, and some other stuff
 The main feature of this project is a leaderboard and submission thing where you can submit how many lollies you got from running to strangers houses!
 
 This project was mainly for me to learn about python and stuff related to it, like sql, jinjascript etc.
@@ -10,6 +9,17 @@ This project was mainly for me to learn about python and stuff related to it, li
 I've made a simple scoreboard project, where you enter your name, and score, it puts the stuff in scores.db, and then shows u the leaderboard
 
 As this was a sample project for me to learn python, I really didn't want to create a new file with brand new css etc, so I just reused one of my previous projects CSS for it.
+
+<h2>Languages used</h2>
+These are the languages that were primarily used in this project <br>
+Python <br>
+HTML <br>
+CSS <br>
+javascript <br>
+SQL <br>
+jinjascript <br>
+
+
 <h2>Notes</h2>
 
 For 3am, I originally thought it just needed to be a dark themed website, later got leaderboard to be based on whichever child racks up the most lollies, hopefully that's good enough for the theme, as I don't really see the point of putting in like js static images wherever yk
