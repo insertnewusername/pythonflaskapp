@@ -21,12 +21,12 @@ Has a leaderboard system<br>
 Is really cool <br>
 Uses sql backend!<br>
 
-This is a project for 3am! (changed my mind bout submitting to live)
+This is a project for 3am! 
 <h2>Project usage</h2>
 The url for the project is as below
-Project url: [https://pythonflaskapp-fdj0.onrender.com](https://mcspeedruns.onrender.com)
+Project url: https://mcspeedruns.onrender.com
 
 
 <h2>Screenshots</h2>
-<img width="1917" height="1028" alt="Screenshot 2026-10-09 101204" src="https://github.com/user-attachments/assets/33581570-553f-4c33-8580-a1d08a217f34" />
-<img width="1917" height="987" alt="Screenshot 2026-10-09 101212" src="https://github.com/user-attachments/assets/548243e3-d18c-434c-8eb6-0c07c27d4021" />
+<img width="1917" height="862" alt="Screenshot 2026-10-14 153445" src="https://github.com/user-attachments/assets/195709f6-e088-4c69-8be2-94c1665f75cc" />
+<img width="1917" height="871" alt="Screenshot 2026-10-14 153451" src="https://github.com/user-attachments/assets/047574a8-c2ac-44e2-85d1-54e538d91169" />
