@@ -1,4 +1,4 @@
-# SAMPLE SCOREBOARD PROJECT (so original name ikr)
+# Python flask app
 
 Within this year I've been introduced to hackclub, I've been learning a few languages. HTML, css, touched a bit on javascript, and godot.
 I thought it would be a suitable time now to introduce myself to python
@@ -22,10 +22,11 @@ Is really cool <br>
 Uses sql backend!<br>
 
 This is a project for 3am! (changed my mind bout submitting to live)
+<h2>Project usage</h2>
+The url for the project is as below
+Project url: [https://pythonflaskapp-fdj0.onrender.com](https://mcspeedruns.onrender.com)
 
-Project url: https://pythonflaskapp-fdj0.onrender.com
-PLEASE NOTE IT MAY TAKE A WHILE FOR IT TO LOAD
-ALSO IGNORE THE 
-Screenshots
+
+<h2>Screenshots</h2>
 <img width="1917" height="1028" alt="Screenshot 2026-10-09 101204" src="https://github.com/user-attachments/assets/33581570-553f-4c33-8580-a1d08a217f34" />
 <img width="1917" height="987" alt="Screenshot 2026-10-09 101212" src="https://github.com/user-attachments/assets/548243e3-d18c-434c-8eb6-0c07c27d4021" />
