@@ -33,7 +33,7 @@ Uses sql backend!<br>
 This is a project for 3am! 
 <h2>Project usage</h2>
 The url for the project is as below
-Project url: https://mcspeedruns.onrender.com
+Project url: lightwind.hackclub.app
 
 
 <h2>Screenshots</h2>
