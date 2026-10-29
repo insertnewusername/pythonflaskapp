@@ -33,17 +33,18 @@ jinjascript <br>
 
 Basically I've coded basic html, css and touched just on the tiniest bit of javascript before. I thought it'd be a suitable time to learn python. This is actually my first python project, and I'm actually quite happy with how it went! I've added features such as rate limiting, and used different frameworks to get things going. For learning python, I actually just went on a bunch of demo website, analysed them to see how they works, and basically a trial and error, with sometimes asking ai for help on a concept (never getting it to generate code tho), and it worked out!
 
-I would write a bibliography, but that would simply be waayyyy to long
+I would write a bibliography, but that would simply be waayyyy to long and impractical so yeah...
 
 <h2>Features</h2>
 Uses python <br>
 Has a leaderboard system<br>
+Has a scavenger log thing to record what you saw <br>
 Actually works <br>
 Is really cool <br>
 Uses sql backend!<br>
 
 <h2>Inspiration</h2>
-I was thinking about hackclub when I was bout to sleep, and then I wondered if I'd keep sticking to the same things I know, just basic HTML, CSS and blindly following tutorials. Then I decided it was time to step it up a bit. Download python, and make a project. So here I am!
+I was thinking about hackclub when I was bout to sleep (12am!), and then I wondered if I'd keep sticking to the same things I know, just basic HTML, CSS and blindly following tutorials. Then I decided it was time to step it up a bit. Download python, and make a project. So here I am!
 
 
 This is a project for 3am! 
@@ -55,5 +56,6 @@ Project url: lightwind.hackclub.app
 
 
 <h2>Screenshots</h2>
+Here are some screenshots of my project
 <img width="1917" height="862" alt="Screenshot 2026-10-14 153445" src="https://github.com/user-attachments/assets/195709f6-e088-4c69-8be2-94c1665f75cc" />
 <img width="1917" height="871" alt="Screenshot 2026-10-14 153451" src="https://github.com/user-attachments/assets/047574a8-c2ac-44e2-85d1-54e538d91169" />
