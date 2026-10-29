@@ -1,5 +1,7 @@
 # Lolly raiders 
 <img width="1917" height="862" alt="Screenshot 2026-10-14 153445" src="https://github.com/user-attachments/assets/195709f6-e088-4c69-8be2-94c1665f75cc" />
+<h2>Description</h2>
+
 This is a flask leaderboard project, where you can enter your name and last name, as well as how many lollies you got from running to strangers houses! Then if you scroll down you'll see a leaderboard with your submission as well as submission of other people.
 
 <h2>How to use</h2>
