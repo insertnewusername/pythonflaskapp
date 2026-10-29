@@ -1,14 +1,22 @@
-# Python flask app
+# Lolly raiders
+<img width="1917" height="862" alt="Screenshot 2026-10-14 153445" src="https://github.com/user-attachments/assets/195709f6-e088-4c69-8be2-94c1665f75cc" />
+This is a flask leaderboard project, where you can enter your name and last name, as well as how many lollies you got from running to strangers houses! Then if you scroll down you'll see a leaderboard with your submission as well as submission of other people.
 
-Within this year I've been introduced to hackclub, I've been learning a few languages. HTML, CSS, touched a bit on javascript, and godot.
-I thought it would be a suitable time now to introduce myself to python
-The main feature of this project is a leaderboard and submission thing where you can submit how many lollies you got from running to strangers houses!
+<h2>How to use</h2>
 
-This project was mainly for me to learn about python and stuff related to it, like sql, jinjascript etc.
+Go to lightwind.hackclub.app
+Type in your name, last name and lollies (doesnt need to be real)<br>
+<img width="1072" height="135" alt="image" src="https://github.com/user-attachments/assets/7e6a2410-0326-4f6a-a7a3-f5c484a6fba0" />
 
-I've made a simple scoreboard project, where you enter your name, and score, it puts the stuff in scores.db, and then shows u the leaderboard
+Press submit button<br>
 
-As this was a sample project for me to learn python, I really didn't want to create a new file with brand new css etc, so I just reused one of my previous projects CSS for it.
+<img width="132" height="83" alt="image" src="https://github.com/user-attachments/assets/54513c66-503a-4f01-8968-669ba008bfd3" />
+
+
+Reload!<br>
+
+<img width="837" height="212" alt="image" src="https://github.com/user-attachments/assets/4ad0b184-148b-4706-9a8c-93307ae69ebc" />
+<img width="1510" height="465" alt="image" src="https://github.com/user-attachments/assets/0ae2af1d-bb4b-437f-a8ff-e28e6fc764dc" />
 
 <h2>Languages used</h2>
 These are the languages that were primarily used in this project <br>
@@ -20,15 +28,22 @@ SQL <br>
 jinjascript <br>
 
 
-<h2>Notes</h2>
+<h2>Bragging rights</h2>
 
-For 3am, I originally thought it just needed to be a dark themed website, later got leaderboard to be based on whichever child racks up the most lollies, hopefully that's good enough for the theme, as I don't really see the point of putting in like js static images wherever yk
+Basically I've coded basic html, css and touched just on the tiniest bit of javascript before. I thought it'd be a suitable time to learn python. This is actually my first python project, and I'm actually quite happy with how it went! I've added features such as rate limiting, and used different frameworks to get things going. For learning python, I actually just went on a bunch of demo website, analysed them to see how they works, and basically a trial and error, with sometimes asking ai for help on a concept (never getting it to generate code tho), and it worked out!
+
+I would write a bibliography, but that would simply be waayyyy to long
 
 <h2>Features</h2>
 Uses python <br>
 Has a leaderboard system<br>
+Actually works <br>
 Is really cool <br>
 Uses sql backend!<br>
+
+<h2>Inspiration</h2>
+I was thinking about hackclub when I was bout to sleep, and then I wondered if I'd keep sticking to the same things I know, just basic HTML, CSS and blindly following tutorials. Then I decided it was time to step it up a bit. Download python, and make a project. So here I am!
+
 
 This is a project for 3am! 
 <h2>Project usage</h2>
