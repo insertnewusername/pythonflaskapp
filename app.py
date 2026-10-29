@@ -132,7 +132,7 @@ def leaderboard():
 
 @app.route('/complete/<realm>', methods=['POST']) #Uses dynamic routing to prevent me from routing 4 times
 @limiter.limit("4 per minute", methods=["POST"]) # Allows 4 post request per minute
-def complete_realm(realm): #(realm is defined in <realm>)
+def complete_realm(realm): #(realm is defined in <realm>)(venv) root@lightwind:~/pythonflaskapp#
     if realm not in VALID_REALMS:
         return redirect('/')  # ignore unknown realm url
     with sqlite3.connect(DB_NAME) as conn:
