@@ -1,4 +1,4 @@
-# Lolly raiders
+# Lolly raiders 
 <img width="1917" height="862" alt="Screenshot 2026-10-14 153445" src="https://github.com/user-attachments/assets/195709f6-e088-4c69-8be2-94c1665f75cc" />
 This is a flask leaderboard project, where you can enter your name and last name, as well as how many lollies you got from running to strangers houses! Then if you scroll down you'll see a leaderboard with your submission as well as submission of other people.
 
@@ -19,6 +19,7 @@ Reload!<br>
 <img width="1510" height="465" alt="image" src="https://github.com/user-attachments/assets/0ae2af1d-bb4b-437f-a8ff-e28e6fc764dc" />
 
 <h2>Languages used</h2>
+
 These are the languages that were primarily used in this project <br>
 Python <br>
 HTML <br>
@@ -28,7 +29,7 @@ SQL <br>
 jinjascript <br>
 
 
-<h2>Bragging rights</h2>
+<h2>Yap from me</h2>
 
 Basically I've coded basic html, css and touched just on the tiniest bit of javascript before. I thought it'd be a suitable time to learn python. This is actually my first python project, and I'm actually quite happy with how it went! I've added features such as rate limiting, and used different frameworks to get things going. For learning python, I actually just went on a bunch of demo website, analysed them to see how they works, and basically a trial and error, with sometimes asking ai for help on a concept (never getting it to generate code tho), and it worked out!
 
@@ -46,6 +47,8 @@ I was thinking about hackclub when I was bout to sleep, and then I wondered if I
 
 
 This is a project for 3am! 
+
+
 <h2>Project usage</h2>
 The url for the project is as below
 Project url: lightwind.hackclub.app
