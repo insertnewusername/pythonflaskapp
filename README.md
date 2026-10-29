@@ -31,6 +31,9 @@ jinjascript <br>
 
 <h2>Yap from me</h2>
 
+Please note that for this project, I was focusing on python, therefore the css has is reused from one of my previous html projects (hopefully you guys are fine with that) <br>
+
+
 Basically I've coded basic html, css and touched just on the tiniest bit of javascript before. I thought it'd be a suitable time to learn python. This is actually my first python project, and I'm actually quite happy with how it went! I've added features such as rate limiting, and used different frameworks to get things going. For learning python, I actually just went on a bunch of demo website, analysed them to see how they works, and basically a trial and error, with sometimes asking ai for help on a concept (never getting it to generate code tho), and it worked out!
 
 I would write a bibliography, but that would simply be waayyyy to long and impractical so yeah...
